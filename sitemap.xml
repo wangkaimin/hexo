@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.wangkaimin.com/temp/password/</loc>
+    
+    <lastmod>2018-09-21T19:52:41.378Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/temp/raw/</loc>
+    
+    <lastmod>2018-09-21T19:48:00.804Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.wangkaimin.com/about/index.html</loc>
     
     <lastmod>2018-09-21T19:29:30.266Z</lastmod>

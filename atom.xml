@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexo.wangkaimin.com/"/>
-  <updated>2018-09-21T17:26:54.081Z</updated>
+  <updated>2018-09-21T19:52:41.378Z</updated>
   <id>https://hexo.wangkaimin.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>password</title>
+    <link href="https://hexo.wangkaimin.com/temp/password/"/>
+    <id>https://hexo.wangkaimin.com/temp/password/</id>
+    <published>2018-09-21T19:50:00.000Z</published>
+    <updated>2018-09-21T19:52:41.378Z</updated>
+    
+    <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Please enter the password to read the blog." />    <label for="pass">Please enter the password to read the blog.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19fvIrcU9j4L259eO1Ge+pTerrxViOsW64Mpy31XffxrVG/TCsxRdyHw49+6y50xJvfK5wAaT2QEA==</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      The article has been encrypted, please enter your password to view.&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>raw</title>
+    <link href="https://hexo.wangkaimin.com/temp/raw/"/>
+    <id>https://hexo.wangkaimin.com/temp/raw/</id>
+    <published>2018-09-21T19:30:00.000Z</published>
+    <updated>2018-09-21T19:48:00.804Z</updated>
+    
+    <content type="html"><![CDATA[<p>raw content.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;raw content.&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo整合disqus</title>
@@ -45,24 +85,6 @@
   </entry>
   
   <entry>
-    <title>batch add text to file head</title>
-    <link href="https://hexo.wangkaimin.com/batch-add-head.sh/"/>
-    <id>https://hexo.wangkaimin.com/batch-add-head.sh/</id>
-    <published>2018-09-21T04:30:00.000Z</published>
-    <updated>2018-09-21T05:17:17.795Z</updated>
-    
-    <content type="html"><![CDATA[<p>批量在文件的行首添加文本！</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">    <span class="comment"># 注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="comment"># 注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]</span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            read_dir <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment"># echo $1</span></span><br><span class="line">            <span class="comment"># echo $1"/"$file</span></span><br><span class="line">            <span class="comment"># 在此处处理文件即可</span></span><br><span class="line">            <span class="keyword">if</span> [ <span class="string">"`awk 'NR==1&#123;print <span class="variable">$1</span>&#125;' <span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$file</span>`"</span> = <span class="string">"---"</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="comment">#echo $1"/"$file</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">                <span class="built_in">echo</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                gsed -i <span class="string">"1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: <span class="variable">$&#123;file%.*&#125;</span>\npublished: false\n---\n/"</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                <span class="comment"># echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; echo $1"/"$file &amp;&amp; echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; gsed -i "1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: $&#123;file%.*&#125;\npublished: false\n---\n/" $1"/"$file</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">            <span class="comment"># [[ "md"x != "$&#123;file##*.&#125;"x ]] &amp;&amp; mv $1"/"$file $1"/"$file.md</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">read_dir <span class="variable">$1</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;批量在文件的行首添加文本！&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>掌握linux命令：sed</title>
     <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/"/>
     <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/</id>
@@ -85,6 +107,24 @@
       <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
     
       <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>batch add text to file head</title>
+    <link href="https://hexo.wangkaimin.com/batch-add-head.sh/"/>
+    <id>https://hexo.wangkaimin.com/batch-add-head.sh/</id>
+    <published>2018-09-21T04:30:00.000Z</published>
+    <updated>2018-09-21T05:17:17.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>批量在文件的行首添加文本！</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">    <span class="comment"># 注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="comment"># 注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]</span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            read_dir <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment"># echo $1</span></span><br><span class="line">            <span class="comment"># echo $1"/"$file</span></span><br><span class="line">            <span class="comment"># 在此处处理文件即可</span></span><br><span class="line">            <span class="keyword">if</span> [ <span class="string">"`awk 'NR==1&#123;print <span class="variable">$1</span>&#125;' <span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$file</span>`"</span> = <span class="string">"---"</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="comment">#echo $1"/"$file</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">                <span class="built_in">echo</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                gsed -i <span class="string">"1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: <span class="variable">$&#123;file%.*&#125;</span>\npublished: false\n---\n/"</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                <span class="comment"># echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; echo $1"/"$file &amp;&amp; echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; gsed -i "1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: $&#123;file%.*&#125;\npublished: false\n---\n/" $1"/"$file</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">            <span class="comment"># [[ "md"x != "$&#123;file##*.&#125;"x ]] &amp;&amp; mv $1"/"$file $1"/"$file.md</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">read_dir <span class="variable">$1</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;批量在文件的行首添加文本！&lt;/p&gt;
+    
+    </summary>
+    
     
   </entry>
   
@@ -388,56 +428,6 @@
       <category term="disqus" scheme="https://hexo.wangkaimin.com/tags/disqus/"/>
     
       <category term="github" scheme="https://hexo.wangkaimin.com/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掌握git：git tag 批量删除</title>
-    <link href="https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/"/>
-    <id>https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:29:26.224Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍了git tag的批量删除的使用方法！</p><a id="more"></a><h2 id="删除以d-开头的tag"><a href="#删除以d-开头的tag" class="headerlink" title="删除以d_开头的tag"></a><strong>删除以d_开头的tag</strong></h2><h3 id="方法一：git-tag-push-tagName"><a href="#方法一：git-tag-push-tagName" class="headerlink" title="方法一：git tag push :tagName"></a>方法一：git tag push :<em>tagName</em></h3><p><code>git show-ref --tag | awk &#39;/\/d_/ {print &quot;:&quot;$2}&#39; | xargs git push origin</code></p><h3 id="方法二：git-tag-d-tagName"><a href="#方法二：git-tag-d-tagName" class="headerlink" title="方法二：git tag -d tagName"></a>方法二：git tag -d <em>tagName</em></h3><p><code>git tag | grep ^d_ | xargs git tag -d</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍了git tag的批量删除的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="https://hexo.wangkaimin.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="https://hexo.wangkaimin.com/tags/git/"/>
-    
-      <category term="git-tag" scheme="https://hexo.wangkaimin.com/tags/git-tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掌握linux命令：cd</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-cd/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-cd/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:22:29.099Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍cd命令的使用方法！</p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍cd命令的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
-    
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
     
   </entry>
   
