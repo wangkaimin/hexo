@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="安装hexo，整合github page的一般流程！">
+<meta name="description" content="批量在文件的行首添加文本！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装hexo，整合github page">
-<meta property="og:url" content="https://hexo.wangkaimin.com/2018/09/19/install-hexo/index.html">
+<meta property="og:title" content="batch add text to file head">
+<meta property="og:url" content="https://hexo.wangkaimin.com/2018/09/21/batch-add-head.sh/index.html">
 <meta property="og:site_name" content="我的笔记本">
-<meta property="og:description" content="安装hexo，整合github page的一般流程！">
+<meta property="og:description" content="批量在文件的行首添加文本！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T05:18:41.926Z">
+<meta property="og:updated_time" content="2018-09-21T05:17:17.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装hexo，整合github page">
-<meta name="twitter:description" content="安装hexo，整合github page的一般流程！">
+<meta name="twitter:title" content="batch add text to file head">
+<meta name="twitter:description" content="批量在文件的行首添加文本！">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://hexo.wangkaimin.com/2018/09/19/install-hexo/"/>
+  <link rel="canonical" href="https://hexo.wangkaimin.com/2018/09/21/batch-add-head.sh/"/>
 
 
 
 
 
-  <title>安装hexo，整合github page | 我的笔记本</title>
+  <title>batch add text to file head | 我的笔记本</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/2018/09/19/install-hexo/">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/2018/09/21/batch-add-head.sh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kaimin">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">安装hexo，整合github page</h1>
+          <h1 class="post-title" itemprop="name headline">batch add text to file head</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T13:00:00+08:00">
-                2018-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T12:30:00+08:00">
+                2018-09-21
               </time>
             
 
@@ -299,9 +299,9 @@
       
 
       
-        <p>安装hexo，整合github page的一般流程！</p>
+        <p>批量在文件的行首添加文本！</p>
 <a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">hexo init hexo-note</span><br><span class="line"><span class="built_in">cd</span> heco-note</span><br><span class="line"></span><br><span class="line"><span class="comment"># rm -rf .git</span></span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git submodule add -f https://github.com/iissnan/hexo-theme-next.git themes/next</span><br><span class="line">git submodule add -b gh-pages git@github.com:wangkaimin/hexo-blog.git public</span><br><span class="line"></span><br><span class="line">git submodule update</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hexo.wangkaimin.com"</span> &gt; ./<span class="built_in">source</span>/CNAME</span><br><span class="line">hexo generate</span><br><span class="line">git remote add git@bitbucket.org:wangkaimin/hexo-note.git</span><br><span class="line">git add . &amp;&amp; git commit -m <span class="string">"init hexo project"</span> &amp;&amp; git push -u origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line">git checkout gh-pages</span><br><span class="line">git push --<span class="built_in">set</span>-upstream origin gh-pages</span><br><span class="line">git add . &amp;&amp; git commit -m <span class="string">"init hexo page"</span> &amp;&amp; git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">    <span class="comment"># 注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="comment"># 注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]</span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            read_dir <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment"># echo $1</span></span><br><span class="line">            <span class="comment"># echo $1"/"$file</span></span><br><span class="line">            <span class="comment"># 在此处处理文件即可</span></span><br><span class="line">            <span class="keyword">if</span> [ <span class="string">"`awk 'NR==1&#123;print <span class="variable">$1</span>&#125;' <span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$file</span>`"</span> = <span class="string">"---"</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="comment">#echo $1"/"$file</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">                <span class="built_in">echo</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                gsed -i <span class="string">"1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: <span class="variable">$&#123;file%.*&#125;</span>\npublished: false\n---\n/"</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                <span class="comment"># echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; echo $1"/"$file &amp;&amp; echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; gsed -i "1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: $&#123;file%.*&#125;\npublished: false\n---\n/" $1"/"$file</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">            <span class="comment"># [[ "md"x != "$&#123;file##*.&#125;"x ]] &amp;&amp; mv $1"/"$file $1"/"$file.md</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">read_dir <span class="variable">$1</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -325,8 +325,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/18/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/" rel="next" title="iphone4s从9.3.5降级到6.1.3">
-                <i class="fa fa-chevron-left"></i> iphone4s从9.3.5降级到6.1.3
+              <a href="/2018/09/20/git/2018-09-20-git-branch-delete/" rel="next" title="掌握git：git branch 删除">
+                <i class="fa fa-chevron-left"></i> 掌握git：git branch 删除
               </a>
             
           </div>
@@ -335,8 +335,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/19/ppt/2018-09-12-create-ppt/" rel="prev" title="如何快速制作一个PPT">
-                如何快速制作一个PPT <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/21/linux/shell/linux-shell-sed/" rel="prev" title="掌握linux命令：sed">
+                掌握linux命令：sed <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

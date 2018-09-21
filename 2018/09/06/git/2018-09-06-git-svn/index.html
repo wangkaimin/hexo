@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="git,git-svn," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="安装hexo，整合github page的一般流程！">
+<meta name="description" content="本文介绍了git-svn的使用流程！">
+<meta name="keywords" content="git,git-svn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装hexo，整合github page">
-<meta property="og:url" content="https://hexo.wangkaimin.com/2018/09/19/install-hexo/index.html">
+<meta property="og:title" content="掌握git：git svn 使用流程">
+<meta property="og:url" content="https://hexo.wangkaimin.com/2018/09/06/git/2018-09-06-git-svn/index.html">
 <meta property="og:site_name" content="我的笔记本">
-<meta property="og:description" content="安装hexo，整合github page的一般流程！">
+<meta property="og:description" content="本文介绍了git-svn的使用流程！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T05:18:41.926Z">
+<meta property="og:image" content="https://gotgit.readthedocs.io/en/latest/_images/git-svn-workflow.png">
+<meta property="og:updated_time" content="2018-09-21T05:29:26.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装hexo，整合github page">
-<meta name="twitter:description" content="安装hexo，整合github page的一般流程！">
+<meta name="twitter:title" content="掌握git：git svn 使用流程">
+<meta name="twitter:description" content="本文介绍了git-svn的使用流程！">
+<meta name="twitter:image" content="https://gotgit.readthedocs.io/en/latest/_images/git-svn-workflow.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://hexo.wangkaimin.com/2018/09/19/install-hexo/"/>
+  <link rel="canonical" href="https://hexo.wangkaimin.com/2018/09/06/git/2018-09-06-git-svn/"/>
 
 
 
 
 
-  <title>安装hexo，整合github page | 我的笔记本</title>
+  <title>掌握git：git svn 使用流程 | 我的笔记本</title>
   
 
 
@@ -232,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/2018/09/19/install-hexo/">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/2018/09/06/git/2018-09-06-git-svn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kaimin">
@@ -249,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">安装hexo，整合github page</h1>
+          <h1 class="post-title" itemprop="name headline">掌握git：git svn 使用流程</h1>
         
 
         <div class="post-meta">
@@ -261,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T13:00:00+08:00">
-                2018-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T17:30:00+08:00">
+                2018-09-06
               </time>
             
 
@@ -271,6 +274,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -299,9 +324,35 @@
       
 
       
-        <p>安装hexo，整合github page的一般流程！</p>
+        <p>本文介绍了git-svn的使用流程！</p>
 <a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">hexo init hexo-note</span><br><span class="line"><span class="built_in">cd</span> heco-note</span><br><span class="line"></span><br><span class="line"><span class="comment"># rm -rf .git</span></span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git submodule add -f https://github.com/iissnan/hexo-theme-next.git themes/next</span><br><span class="line">git submodule add -b gh-pages git@github.com:wangkaimin/hexo-blog.git public</span><br><span class="line"></span><br><span class="line">git submodule update</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hexo.wangkaimin.com"</span> &gt; ./<span class="built_in">source</span>/CNAME</span><br><span class="line">hexo generate</span><br><span class="line">git remote add git@bitbucket.org:wangkaimin/hexo-note.git</span><br><span class="line">git add . &amp;&amp; git commit -m <span class="string">"init hexo project"</span> &amp;&amp; git push -u origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line">git checkout gh-pages</span><br><span class="line">git push --<span class="built_in">set</span>-upstream origin gh-pages</span><br><span class="line">git add . &amp;&amp; git commit -m <span class="string">"init hexo page"</span> &amp;&amp; git push origin gh-pages</span><br></pre></td></tr></table></figure>
+<h1 id="Git和SVN协同模型"><a href="#Git和SVN协同模型" class="headerlink" title="Git和SVN协同模型"></a>Git和SVN协同模型</h1><h2 id="1、使用git-svn的一般流程"><a href="#1、使用git-svn的一般流程" class="headerlink" title="1、使用git-svn的一般流程"></a>1、使用git-svn的一般流程</h2><p><img src="https://gotgit.readthedocs.io/en/latest/_images/git-svn-workflow.png" alt="git-svn工作流"></p>
+<h2 id="2、具体操作流程"><a href="#2、具体操作流程" class="headerlink" title="2、具体操作流程"></a>2、具体操作流程</h2><h3 id="a-clone"><a href="#a-clone" class="headerlink" title="a. clone"></a>a. clone</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn clone -s file:///path/to/svn/repos/demo git-svn-demo</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>-s 指明仓库采⽤用标准svn仓库布局:trunk/branches/tags，⾮非标准布局可分别指定 trung/branches/tags，请查阅⽂文档( git help svn )</strong></li>
+<li>其中repo为仓库根⽬目录</li>
+<li>会将svn的每⼀一个提交转换为本地Git仓库中的提交</li>
+</ul>
+<h2 id="b-fetch"><a href="#b-fetch" class="headerlink" title="b. fetch"></a>b. fetch</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn fetch</span><br></pre></td></tr></table></figure>
+<ul>
+<li>显然，由于Subversion版本库中包含了新的提交，导致执行<strong>git svn dcommit</strong>出错。这时需执行<strong>git svn fetch</strong>命令，以从Subversion版本库获取更新。</li>
+</ul>
+<h2 id="c-rebase"><a href="#c-rebase" class="headerlink" title="c. rebase"></a>c. rebase</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn rebase</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当获取了新的Subversion提交之后，需要执行<strong>git svn rebase</strong>将Git中未推送到Subversion的提交通过变基（rebase）形成包含Subversion最新提交的线性提交。这是因为Subversion的提交都是线性的。</li>
+</ul>
+<h2 id="d-fix-conflict"><a href="#d-fix-conflict" class="headerlink" title="d. fix conflict"></a>d. fix conflict</h2><ul>
+<li>如果有冲突需要解决冲突</li>
+<li>When you have resolved this problem run “git rebase –continue”.</li>
+<li>If you would prefer to skip this patch, instead run “git rebase –skip”.</li>
+<li>To restore the original branch and stop rebasing run “git rebase –abort”.</li>
+</ul>
+<h2 id="e-continue"><a href="#e-continue" class="headerlink" title="e. continue"></a>e. continue</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase --continue</span><br></pre></td></tr></table></figure>
+<h2 id="f-dcommit"><a href="#f-dcommit" class="headerlink" title="f. dcommit"></a>f. dcommit</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git svn dcommit</span><br></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><blockquote>
+<p><a href="https://gotgit.readthedocs.io/en/latest/04-git-model/070-git-svn.html" target="_blank" rel="noopener">https://gotgit.readthedocs.io/en/latest/04-git-model/070-git-svn.html</a></p>
+</blockquote>
+
       
     </div>
     
@@ -316,6 +367,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/git-svn/" rel="tag"># git-svn</a>
+          
+        </div>
+      
 
       
       
@@ -325,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/18/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/" rel="next" title="iphone4s从9.3.5降级到6.1.3">
-                <i class="fa fa-chevron-left"></i> iphone4s从9.3.5降级到6.1.3
+              <a href="/2018/09/05/2018-09-05-markdown-info/" rel="next" title="学习markdown：markdown 使用说明">
+                <i class="fa fa-chevron-left"></i> 学习markdown：markdown 使用说明
               </a>
             
           </div>
@@ -335,8 +394,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/19/ppt/2018-09-12-create-ppt/" rel="prev" title="如何快速制作一个PPT">
-                如何快速制作一个PPT <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/07/git/submodule/2018-09-07-git-submodule/" rel="prev" title="掌握git：git submodule使用">
+                掌握git：git submodule使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -389,8 +448,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -450,6 +518,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git和SVN协同模型"><span class="nav-number">1.</span> <span class="nav-text">Git和SVN协同模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、使用git-svn的一般流程"><span class="nav-number">1.1.</span> <span class="nav-text">1、使用git-svn的一般流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、具体操作流程"><span class="nav-number">1.2.</span> <span class="nav-text">2、具体操作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-clone"><span class="nav-number">1.2.1.</span> <span class="nav-text">a. clone</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-fetch"><span class="nav-number">1.3.</span> <span class="nav-text">b. fetch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-rebase"><span class="nav-number">1.4.</span> <span class="nav-text">c. rebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-fix-conflict"><span class="nav-number">1.5.</span> <span class="nav-text">d. fix conflict</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-continue"><span class="nav-number">1.6.</span> <span class="nav-text">e. continue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-dcommit"><span class="nav-number">1.7.</span> <span class="nav-text">f. dcommit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
