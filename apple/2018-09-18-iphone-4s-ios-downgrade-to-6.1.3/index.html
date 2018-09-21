@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文介绍iphone 4s从9.3.5版本降级到6.1.3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iphone4s从9.3.5降级到6.1.3">
+<meta property="og:url" content="https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/index.html">
+<meta property="og:site_name" content="我的笔记本">
+<meta property="og:description" content="本文介绍iphone 4s从9.3.5版本降级到6.1.3">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png">
+<meta property="og:image" content="https://1.bp.blogspot.com/-SiFfO_-uUPg/Wlw8UuikhXI/AAAAAAAAJHg/YguHUm1VjU0xYM5iGwLvKltZFmY5_aDZQCLcBGAs/s1600/iphone-iphone4s-colors.jpg">
+<meta property="og:image" content="https://3.bp.blogspot.com/-bvmnRO0dolU/WlwxQ-n_OqI/AAAAAAAAJGw/YcRERVe_Au8ZojmELQFJep8RGd2EO3D3gCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_19_09.png">
+<meta property="og:image" content="https://4.bp.blogspot.com/-fMg0M8Gkvqs/WlwxRHZmKLI/AAAAAAAAJGw/-yPEIXncXEUzEMgjJZ2oD6FDFO3uE6_ggCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_25_07.png">
+<meta property="og:image" content="https://3.bp.blogspot.com/-m_kDD1h4YAM/WlwxQNY1sII/AAAAAAAAJGw/sNQdmlOBls4mHmKNw1gzdhrqP6yfJBZgACEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B12.25.17.png">
+<meta property="og:image" content="https://1.bp.blogspot.com/-k3v2aXyrhoA/Wlwx-h22K8I/AAAAAAAAJG4/WOCZepnELfYEECcacRQkTSk7lhgBpl6kgCLcBGAs/s1600/result.png">
+<meta property="og:image" content="https://2.bp.blogspot.com/-F4Pxmc8ZKUs/Wlw0eM_PXDI/AAAAAAAAJHU/LloJ1DWCNXI-jIiriHkc-d6ApOFGF8f6ACLcBGAs/s1600/PNG%2B%25E5%25BD%25B1%25E5%2583%258F-B3837C5DBB6D-1.png">
+<meta property="og:updated_time" content="2018-09-18T04:03:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iphone4s从9.3.5降级到6.1.3">
+<meta name="twitter:description" content="本文介绍iphone 4s从9.3.5版本降级到6.1.3">
+<meta name="twitter:image" content="https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/"/>
+
+
+
+
+
+  <title>iphone4s从9.3.5降级到6.1.3 | 我的笔记本</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的笔记本</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kaimin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的笔记本">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">iphone4s从9.3.5降级到6.1.3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T12:03:51+08:00">
+                2018-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/" class="leancloud_visitors" data-flag-title="iphone4s从9.3.5降级到6.1.3">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文介绍iphone 4s从9.3.5版本降级到6.1.3</p>
+<a id="more"></a>
+<p>2018年01月11日的下午两点到四点，苹果突然开放了大部分的iOS 认证，大家还以为苹果这么好心终于可以让大家想降级就降级，结果没多久又把认证关了起来…</p>
+<p>大家正在伤心难过的时候，有人发现 iPhone 4S 和 iPad 2 的 iOS 6.1.3 认证竟然没有关闭！</p>
+<p><a href="https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png" target="_blank" rel="noopener"><img src="https://2.bp.blogspot.com/-7LJ_4uANUbg/WlwXDJAKMsI/AAAAAAAAJF8/pd5BSzVYL286zEgeCDc6izlpWVM8F06yQCLcBGAs/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B10_opt.png" alt="img"></a></p>
+<p>本站很久之前就介绍过利用 odysseusOTA 就可以将 iPhone 4S 降级至 iOS 6.1.3，详情请看：<a href="https://applefans.today/blog/1839968843/" target="_blank" rel="noopener">iPhone 4s/iPad 2降級iOS 6.1.3教學（使用odysseusOTA）</a>。</p>
+<p>但毕竟操作相当复杂，对于大多数的iPhone 4S 用户来说是个不可能的任务，这次苹果直接开放iOS 6.1.3 认证，意味着使用者可以直接下载相对应的韧体，然后透过iTunes 就可以将自己手中的?iPhone 4S 降级回iOS 6.1.3。</p>
+<p><a href="https://1.bp.blogspot.com/-SiFfO_-uUPg/Wlw8UuikhXI/AAAAAAAAJHg/YguHUm1VjU0xYM5iGwLvKltZFmY5_aDZQCLcBGAs/s1600/iphone-iphone4s-colors.jpg" target="_blank" rel="noopener"><img src="https://1.bp.blogspot.com/-SiFfO_-uUPg/Wlw8UuikhXI/AAAAAAAAJHg/YguHUm1VjU0xYM5iGwLvKltZFmY5_aDZQCLcBGAs/s1600/iphone-iphone4s-colors.jpg" alt="img"></a></p>
+<h2 id="行前工具准备"><a href="#行前工具准备" class="headerlink" title="行前工具准备"></a>行前工具准备</h2><ul>
+<li>已装好 iTunes 的 Mac 或 Windows 乙台（<a href="https://www.apple.com/tw/itunes/download/" target="_blank" rel="noopener">点此下载 iTunes</a>）</li>
+<li>iPhone 30pin 传输线</li>
+</ul>
+<h2 id="下載-iOS-6-1-3-韌體"><a href="#下載-iOS-6-1-3-韌體" class="headerlink" title="下載 iOS 6.1.3 韌體"></a>下載 iOS 6.1.3 韌體</h2><ul>
+<li><a href="http://appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">iPhone 4S 苹果官方下载连结</a>（<a href="http:// appldnld.apple.com/iOS6.1/091-2611.20130319.Fr54r/iPhone4,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">点此下载</a>）</li>
+<li><a href="http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">iPad 2（Wi-Fi） 苹果官方下载连结</a>（<a href="http://appldnld.apple.com/iOS6.1/091-2397.20130319.EEae9/iPad2,1_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">点此下载</a>)</li>
+<li><a href="http://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">iPad 2（GSM）苹果官方下载连结</a>（<a href="http ://appldnld.apple.com/iOS6.1/091-2472.20130319.Ta4rt/iPad2,2_6.1.3_10B329_Restore.ipsw">点此下载</a>）</li>
+<li><a href="http://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw" target="_blank" rel="noopener">iPad 2（CDMA）苹果官方下载连结</a>（<a href="http ://appldnld.apple.com/iOS6.1/091-2464.20130319.KF6yt/iPad2,3_6.1.3_10B329_Restore.ipsw">点此下载</a>）</li>
+</ul>
+<p>※如果你的 iPad 2 是 2012 年中出的小改版，就无法降级</p>
+<h2 id="iPhone-4S-或-iPad-2-降級至-iOS-6-1-3（以-iPhone-4S-為例）"><a href="#iPhone-4S-或-iPad-2-降級至-iOS-6-1-3（以-iPhone-4S-為例）" class="headerlink" title="iPhone 4S 或 iPad 2 降級至 iOS 6.1.3（以 iPhone 4S 為例）"></a>iPhone 4S 或 iPad 2 降級至 iOS 6.1.3（以 iPhone 4S 為例）</h2><p>浪子回头金不换，iPhone 4S 或 iPad 2 现在就可以回头，只要几个步骤就可以降级回原来的版本，就让我们开始吧！</p>
+<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1."></a>Step 1.</h3><h4 id="⌘-Mac："><a href="#⌘-Mac：" class="headerlink" title="⌘ Mac："></a>⌘ Mac：</h4><p>开启 iTunes 接上 iPhone/iPad，按着键盘上的 option 键不放，同时点选 iTunes 上的【回复 iPhone…】按钮。</p>
+<h4 id="⌘-Windows："><a href="#⌘-Windows：" class="headerlink" title="⌘ Windows："></a>⌘ Windows：</h4><p>开启 iTunes 接上 iPhone/iPad，按着键盘上的 Shift 键不放，同时点选 iTunes 上的【回复 iPhone…】按钮。</p>
+<p><a href="https://3.bp.blogspot.com/-bvmnRO0dolU/WlwxQ-n_OqI/AAAAAAAAJGw/YcRERVe_Au8ZojmELQFJep8RGd2EO3D3gCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_19_09.png" target="_blank" rel="noopener"><img src="https://3.bp.blogspot.com/-bvmnRO0dolU/WlwxQ-n_OqI/AAAAAAAAJGw/YcRERVe_Au8ZojmELQFJep8RGd2EO3D3gCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_19_09.png" alt="img"></a></p>
+<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2."></a>Step 2.</h3><p>找到刚刚下载好的 iOS 镜像，存档名是 .ipsw。 （如果下载回来的档案是 .zip，直接改成 .ipsw 即可）</p>
+<p><a href="https://4.bp.blogspot.com/-fMg0M8Gkvqs/WlwxRHZmKLI/AAAAAAAAJGw/-yPEIXncXEUzEMgjJZ2oD6FDFO3uE6_ggCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_25_07.png" target="_blank" rel="noopener"><img src="https://4.bp.blogspot.com/-fMg0M8Gkvqs/WlwxRHZmKLI/AAAAAAAAJGw/-yPEIXncXEUzEMgjJZ2oD6FDFO3uE6_ggCEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7_2018-01-15_12_25_07.png" alt="img"></a></p>
+<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3."></a>Step 3.</h3><p>iTunes 会跳出视窗询问是否确定要清除和回复到 iOS 6.1.3，请点击【回复】来继续下一步。</p>
+<p><a href="https://3.bp.blogspot.com/-m_kDD1h4YAM/WlwxQNY1sII/AAAAAAAAJGw/sNQdmlOBls4mHmKNw1gzdhrqP6yfJBZgACEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B12.25.17.png" target="_blank" rel="noopener"><img src="https://3.bp.blogspot.com/-m_kDD1h4YAM/WlwxQNY1sII/AAAAAAAAJGw/sNQdmlOBls4mHmKNw1gzdhrqP6yfJBZgACEwYBhgL/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%2B2018-01-15%2B12.25.17.png" alt="img"></a></p>
+<h3 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4."></a>Step 4.</h3><p>接下来 iTunes 就会开始帮 iPhone 4S 降级，大约 10 分钟左右可以降级完成。</p>
+<p><a href="https://1.bp.blogspot.com/-k3v2aXyrhoA/Wlwx-h22K8I/AAAAAAAAJG4/WOCZepnELfYEECcacRQkTSk7lhgBpl6kgCLcBGAs/s1600/result.png" target="_blank" rel="noopener"><img src="https://1.bp.blogspot.com/-k3v2aXyrhoA/Wlwx-h22K8I/AAAAAAAAJG4/WOCZepnELfYEECcacRQkTSk7lhgBpl6kgCLcBGAs/s1600/result.png" alt="img"></a></p>
+<h3 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5."></a>Step 5.</h3><p>大功告成！iPhone 4S 回到 iOS 6.1.3 了！</p>
+<p><a href="https://2.bp.blogspot.com/-F4Pxmc8ZKUs/Wlw0eM_PXDI/AAAAAAAAJHU/LloJ1DWCNXI-jIiriHkc-d6ApOFGF8f6ACLcBGAs/s1600/PNG%2B%25E5%25BD%25B1%25E5%2583%258F-B3837C5DBB6D-1.png" target="_blank" rel="noopener"><img src="https://2.bp.blogspot.com/-F4Pxmc8ZKUs/Wlw0eM_PXDI/AAAAAAAAJHU/LloJ1DWCNXI-jIiriHkc-d6ApOFGF8f6ACLcBGAs/s1600/PNG%2B%25E5%25BD%25B1%25E5%2583%258F-B3837C5DBB6D-1.png" alt="img"></a></p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>iPhone 4S 是 Steve Jobs 最后一支 iPhone 作品，也被认为是「史上最经典的 iPhone」。</p>
+<p>不过现在把 iPhone 4S 降级回 iOS 6.1.3 基本上也只是用来怀旧，没有太大的用处，毕竟现在大部分的 Apps 都需要 iOS 9 以上才能支援。</p>
+<blockquote>
+<p>摘录：</p>
+<ul>
+<li><a href="https://applefans.today/iphone-4s-downgrade-ios-6-1-3" target="_blank" rel="noopener">超簡單！iPhone 4S 降級 iOS 6.1.3 教學（iPad 2 通用）</a></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ubuntu/2018-09-17-change-timezone-in-linux/" rel="next" title="Linux下修改时区">
+                <i class="fa fa-chevron-left"></i> Linux下修改时区
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/install-hexo/" rel="prev" title="安装hexo，整合github page">
+                安装hexo，整合github page <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">kaimin</p>
+              <p class="site-description motion-element" itemprop="description">这是我的个人笔记本，使用Hexo生成，采用Next主题，托管于Github Pages上面。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行前工具准备"><span class="nav-number">1.</span> <span class="nav-text">行前工具准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下載-iOS-6-1-3-韌體"><span class="nav-number">2.</span> <span class="nav-text">下載 iOS 6.1.3 韌體</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone-4S-或-iPad-2-降級至-iOS-6-1-3（以-iPhone-4S-為例）"><span class="nav-number">3.</span> <span class="nav-text">iPhone 4S 或 iPad 2 降級至 iOS 6.1.3（以 iPhone 4S 為例）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1"><span class="nav-number">3.1.</span> <span class="nav-text">Step 1.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#⌘-Mac："><span class="nav-number">3.1.1.</span> <span class="nav-text">⌘ Mac：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#⌘-Windows："><span class="nav-number">3.1.2.</span> <span class="nav-text">⌘ Windows：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2"><span class="nav-number">3.2.</span> <span class="nav-text">Step 2.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3"><span class="nav-number">3.3.</span> <span class="nav-text">Step 3.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-4"><span class="nav-number">3.4.</span> <span class="nav-text">Step 4.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-5"><span class="nav-number">3.5.</span> <span class="nav-text">Step 5.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結語"><span class="nav-number">4.</span> <span class="nav-text">結語</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kaimin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://hexo-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/';
+          this.page.identifier = 'apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/';
+          this.page.title = 'iphone4s从9.3.5降级到6.1.3';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hexo-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("P52VfVQJ3ihFIpdVRLHzi9fM-gzGzoHsz", "qkgX9OLeFWGe4N4fAQKgCyGR");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
