@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hexo.wangkaimin.com/2018-09-05-markdown-info/</loc>
+    <loc>https://hexo.wangkaimin.com/about/index.html</loc>
     
-    <lastmod>2018-09-21T18:15:57.638Z</lastmod>
+    <lastmod>2018-09-21T19:29:30.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/markdown-info/</loc>
+    
+    <lastmod>2018-09-21T19:28:46.698Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://hexo.wangkaimin.com/tags/index.html</loc>
     
     <lastmod>2018-09-21T18:10:31.782Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/about/index.html</loc>
-    
-    <lastmod>2018-09-21T18:08:40.881Z</lastmod>
     
   </url>
   
