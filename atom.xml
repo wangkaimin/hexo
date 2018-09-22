@@ -23,7 +23,7 @@
     <published>2018-09-21T19:50:00.000Z</published>
     <updated>2018-09-21T19:52:41.378Z</updated>
     
-    <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Please enter the password to read the blog." />    <label for="pass">Please enter the password to read the blog.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19fvIrcU9j4L259eO1Ge+pTerrxViOsW64Mpy31XffxrVG/TCsxRdyHw49+6y50xJvfK5wAaT2QEA==</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="security">  <div class="input-container">  <input type="password" class="form-control" id="pass" placeholder="Please enter the password to read the blog." />    <label for="pass">Please enter the password to read the blog.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+9Yt4nRp0QDMKpStt5dEKx/Q//yR6ZkgbcgMt8MhjssKaoFD3WgOE4OvJZWAZTGYooFeRh1w84rg==</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -85,6 +85,24 @@
   </entry>
   
   <entry>
+    <title>batch add text to file head</title>
+    <link href="https://hexo.wangkaimin.com/batch-add-head.sh/"/>
+    <id>https://hexo.wangkaimin.com/batch-add-head.sh/</id>
+    <published>2018-09-21T04:30:00.000Z</published>
+    <updated>2018-09-21T05:17:17.795Z</updated>
+    
+    <content type="html"><![CDATA[<p>批量在文件的行首添加文本！</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">    <span class="comment"># 注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="comment"># 注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]</span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            read_dir <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment"># echo $1</span></span><br><span class="line">            <span class="comment"># echo $1"/"$file</span></span><br><span class="line">            <span class="comment"># 在此处处理文件即可</span></span><br><span class="line">            <span class="keyword">if</span> [ <span class="string">"`awk 'NR==1&#123;print <span class="variable">$1</span>&#125;' <span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$file</span>`"</span> = <span class="string">"---"</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="comment">#echo $1"/"$file</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">                <span class="built_in">echo</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                gsed -i <span class="string">"1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: <span class="variable">$&#123;file%.*&#125;</span>\npublished: false\n---\n/"</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                <span class="comment"># echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; echo $1"/"$file &amp;&amp; echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; gsed -i "1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: $&#123;file%.*&#125;\npublished: false\n---\n/" $1"/"$file</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">            <span class="comment"># [[ "md"x != "$&#123;file##*.&#125;"x ]] &amp;&amp; mv $1"/"$file $1"/"$file.md</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">read_dir <span class="variable">$1</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;批量在文件的行首添加文本！&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>掌握linux命令：sed</title>
     <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/"/>
     <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/</id>
@@ -107,24 +125,6 @@
       <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
     
       <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>batch add text to file head</title>
-    <link href="https://hexo.wangkaimin.com/batch-add-head.sh/"/>
-    <id>https://hexo.wangkaimin.com/batch-add-head.sh/</id>
-    <published>2018-09-21T04:30:00.000Z</published>
-    <updated>2018-09-21T05:17:17.795Z</updated>
-    
-    <content type="html"><![CDATA[<p>批量在文件的行首添加文本！</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">    <span class="comment"># 注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">        <span class="comment"># 注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]</span><br><span class="line">        <span class="keyword">then</span></span><br><span class="line">            read_dir <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment"># echo $1</span></span><br><span class="line">            <span class="comment"># echo $1"/"$file</span></span><br><span class="line">            <span class="comment"># 在此处处理文件即可</span></span><br><span class="line">            <span class="keyword">if</span> [ <span class="string">"`awk 'NR==1&#123;print <span class="variable">$1</span>&#125;' <span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$file</span>`"</span> = <span class="string">"---"</span> ]; <span class="keyword">then</span></span><br><span class="line">                <span class="comment">#echo $1"/"$file</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">echo</span> <span class="string">""</span> &gt; /dev/null</span><br><span class="line">                <span class="built_in">echo</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                gsed -i <span class="string">"1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: <span class="variable">$&#123;file%.*&#125;</span>\npublished: false\n---\n/"</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">                <span class="comment"># echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; echo $1"/"$file &amp;&amp; echo $&#123;file%.*&#125;</span></span><br><span class="line">                <span class="comment"># [[ "test.txt.md" == "$&#123;file&#125;" ]] &amp;&amp; gsed -i "1s/^/---\ndate: 2018-09-21 12:30:00\ntitle: $&#123;file%.*&#125;\npublished: false\n---\n/" $1"/"$file</span></span><br><span class="line">            <span class="keyword">fi</span></span><br><span class="line">            <span class="comment"># [[ "md"x != "$&#123;file##*.&#125;"x ]] &amp;&amp; mv $1"/"$file $1"/"$file.md</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">read_dir <span class="variable">$1</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;批量在文件的行首添加文本！&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
@@ -262,24 +262,6 @@
   </entry>
   
   <entry>
-    <title>Linux下修改时区</title>
-    <link href="https://hexo.wangkaimin.com/ubuntu/2018-09-17-change-timezone-in-linux/"/>
-    <id>https://hexo.wangkaimin.com/ubuntu/2018-09-17-change-timezone-in-linux/</id>
-    <published>2018-09-17T10:17:48.000Z</published>
-    <updated>2018-09-17T10:17:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Linux下修改时区，包括Ubuntu和CentOS！</p><a id="more"></a><h2 id="Ubuntu下修改时区"><a href="#Ubuntu下修改时区" class="headerlink" title="Ubuntu下修改时区"></a>Ubuntu下修改时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure><h2 id="CentOS下修改时区"><a href="#CentOS下修改时区" class="headerlink" title="CentOS下修改时区"></a>CentOS下修改时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">timedatectl list-timezones # 列出所有时区</span><br><span class="line">timedatectl set-local-rtc 1 # 将硬件时钟调整为与本地时钟一致, 0 为设置为 UTC 时间</span><br><span class="line">timedatectl set-timezone Asia/Shanghai # 设置系统时区为上海</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Linux下修改时区，包括Ubuntu和CentOS！&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>2018-09 TODO list</title>
     <link href="https://hexo.wangkaimin.com/sogou/note/2018-09-01-todo-list/"/>
     <id>https://hexo.wangkaimin.com/sogou/note/2018-09-01-todo-list/</id>
@@ -300,17 +282,17 @@
   </entry>
   
   <entry>
-    <title>Node安装：nvm、npm的安装方法</title>
-    <link href="https://hexo.wangkaimin.com/ubuntu/2018-09-10-nvm-node-npm-install/"/>
-    <id>https://hexo.wangkaimin.com/ubuntu/2018-09-10-nvm-node-npm-install/</id>
-    <published>2018-09-17T02:57:59.000Z</published>
-    <updated>2018-09-17T02:57:59.000Z</updated>
+    <title>Linux下修改时区</title>
+    <link href="https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/"/>
+    <id>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/</id>
+    <published>2018-09-16T16:00:00.000Z</published>
+    <updated>2018-09-22T05:15:24.229Z</updated>
     
-    <content type="html"><![CDATA[<p>本文介绍nvm、npm的一般安装方法！</p><a id="more"></a><p><a href="https://npm.taobao.org/" target="_blank" rel="noopener">https://npm.taobao.org/</a></p><p>国内优秀npm镜像推荐及使用<br>npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm镜像资源，国内用户可以选择使用。<br>国内优秀npm镜像淘宝npm镜像</p><pre><code>* 搜索地址：http://npm.taobao.org/* registry地址：http://registry.npm.taobao.org/</code></pre><p>cnpmjs镜像</p><pre><code>* 搜索地址：http://cnpmjs.org/* registry地址：http://r.cnpmjs.org/</code></pre><p>如何使用<br>有很多方法来配置npm的registry地址，下面根据不同情境列出几种比较常用的方法。以淘宝npm镜像举例：<br>1.临时使用<br>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> install express<br>2.持久使用<br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p><p>// 配置后可通过下面方式来验证是否成功<br>npm config get registry<br>// 或<br>npm info express<br>3.通过cnpm使用<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p><p>// 使用<br>cnpm install express</p><p>##<br>root@wawa_p1:~# npm config get registry<br><a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>root@wawa_p1:~# </p><p>##</p><p>npm config set registry <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a></p><h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>安装 Node.js 的最佳方式是使用 nvm。</p><p>cURL:</p><p>$ curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>Wget:</p><p>$ wget -qO- <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p><p>$ nvm install stable</p><h2 id="npm-安装"><a href="#npm-安装" class="headerlink" title="npm 安装"></a>npm 安装</h2><p>第二种安装方法：</p><p>先安装，nvm，即是Node Version Manager(Node版本管理器)</p><p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh</a> | bash<br> 或者使用  wget</p><p>wget -qO- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh</a> | bash<br>之后需要激活nvm:</p><p>$ source ~/.nvm/nvm.sh<br>激活完成后，安装node</p><p>nvm install node<br>安装完成后，切换到该版本</p><p>nvm use node</p><h2 id="建立软连接"><a href="#建立软连接" class="headerlink" title="建立软连接"></a>建立软连接</h2><h2 id="运行node项目时报错：-usr-bin-env-node-No-such-file-or-directory"><a href="#运行node项目时报错：-usr-bin-env-node-No-such-file-or-directory" class="headerlink" title="运行node项目时报错：/usr/bin/env: node: No such file or directory"></a>运行node项目时报错：/usr/bin/env: node: No such file or directory</h2><p>ln -s /usr/bin/nodejs /usr/bin/node</p><h2 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级npm</span></span><br><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure><blockquote><p>参考：</p><ul><li><a href=""></a></li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>Linux下修改时区，包括Ubuntu和CentOS！</p><a id="more"></a><h2 id="Ubuntu下修改时区"><a href="#Ubuntu下修改时区" class="headerlink" title="Ubuntu下修改时区"></a>Ubuntu下修改时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure><h2 id="CentOS下修改时区"><a href="#CentOS下修改时区" class="headerlink" title="CentOS下修改时区"></a>CentOS下修改时区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">timedatectl list-timezones # 列出所有时区</span><br><span class="line">timedatectl set-local-rtc 1 # 将硬件时钟调整为与本地时钟一致, 0 为设置为 UTC 时间</span><br><span class="line">timedatectl set-timezone Asia/Shanghai # 设置系统时区为上海</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文介绍nvm、npm的一般安装方法！&lt;/p&gt;
+      &lt;p&gt;Linux下修改时区，包括Ubuntu和CentOS！&lt;/p&gt;
     
     </summary>
     
@@ -340,6 +322,28 @@
   </entry>
   
   <entry>
+    <title>部署github page：使用jekyll admin</title>
+    <link href="https://hexo.wangkaimin.com/git/github/2018-09-10-install-jekyll-admin/"/>
+    <id>https://hexo.wangkaimin.com/git/github/2018-09-10-install-jekyll-admin/</id>
+    <published>2018-09-10T04:30:00.000Z</published>
+    <updated>2018-09-21T05:28:42.928Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文介绍如何使用Jekyll admin。</p><a id="more"></a><h2 id="在-config中增加："><a href="#在-config中增加：" class="headerlink" title="在_config中增加："></a>在_config中增加：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">  - jekyll-feed</span><br><span class="line">  - jekyll-admin</span><br><span class="line">  - jekyll-gist</span><br></pre></td></tr></table></figure><h2 id="在Gemfile中增加："><a href="#在Gemfile中增加：" class="headerlink" title="在Gemfile中增加："></a>在Gemfile中增加：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">group :jekyll_plugins do</span><br><span class="line">  gem &quot;jekyll-feed&quot;, &quot;~&gt; 0.6&quot;</span><br><span class="line">  gem &apos;jekyll-admin&apos;</span><br><span class="line">  gem &apos;jekyll-gist&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem install jekyll-admin</span><br><span class="line">bundle install</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文介绍如何使用Jekyll admin。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="github-page" scheme="https://hexo.wangkaimin.com/categories/github-page/"/>
+    
+    
+      <category term="jekyll" scheme="https://hexo.wangkaimin.com/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
     <title>部署github page：jekyll评论整合gitment</title>
     <link href="https://hexo.wangkaimin.com/git/github/2018-09-10-github-page-jekyll-gitment/"/>
     <id>https://hexo.wangkaimin.com/git/github/2018-09-10-github-page-jekyll-gitment/</id>
@@ -364,31 +368,27 @@
   </entry>
   
   <entry>
-    <title>部署github page：使用jekyll admin</title>
-    <link href="https://hexo.wangkaimin.com/git/github/2018-09-10-install-jekyll-admin/"/>
-    <id>https://hexo.wangkaimin.com/git/github/2018-09-10-install-jekyll-admin/</id>
-    <published>2018-09-10T04:30:00.000Z</published>
-    <updated>2018-09-21T05:28:42.928Z</updated>
+    <title>Node安装：nvm、npm的安装方法</title>
+    <link href="https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/"/>
+    <id>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/</id>
+    <published>2018-09-09T16:00:00.000Z</published>
+    <updated>2018-09-22T05:12:51.382Z</updated>
     
-    <content type="html"><![CDATA[<p>本文介绍如何使用Jekyll admin。</p><a id="more"></a><h2 id="在-config中增加："><a href="#在-config中增加：" class="headerlink" title="在_config中增加："></a>在_config中增加：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins:</span><br><span class="line">  - jekyll-feed</span><br><span class="line">  - jekyll-admin</span><br><span class="line">  - jekyll-gist</span><br></pre></td></tr></table></figure><h2 id="在Gemfile中增加："><a href="#在Gemfile中增加：" class="headerlink" title="在Gemfile中增加："></a>在Gemfile中增加：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">group :jekyll_plugins do</span><br><span class="line">  gem &quot;jekyll-feed&quot;, &quot;~&gt; 0.6&quot;</span><br><span class="line">  gem &apos;jekyll-admin&apos;</span><br><span class="line">  gem &apos;jekyll-gist&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem install jekyll-admin</span><br><span class="line">bundle install</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>本文介绍nvm、npm的一般安装方法！</p><a id="more"></a><p><a href="https://npm.taobao.org/" target="_blank" rel="noopener">https://npm.taobao.org/</a></p><p>国内优秀npm镜像推荐及使用<br>npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm镜像资源，国内用户可以选择使用。<br>国内优秀npm镜像淘宝npm镜像</p><pre><code>* 搜索地址：http://npm.taobao.org/* registry地址：http://registry.npm.taobao.org/</code></pre><p>cnpmjs镜像</p><pre><code>* 搜索地址：http://cnpmjs.org/* registry地址：http://r.cnpmjs.org/</code></pre><p>如何使用<br>有很多方法来配置npm的registry地址，下面根据不同情境列出几种比较常用的方法。以淘宝npm镜像举例：<br>1.临时使用<br>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> install express<br>2.持久使用<br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p><p>// 配置后可通过下面方式来验证是否成功<br>npm config get registry<br>// 或<br>npm info express<br>3.通过cnpm使用<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p><p>// 使用<br>cnpm install express</p><p>##<br>root@wawa_p1:~# npm config get registry<br><a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>root@wawa_p1:~# </p><p>##</p><p>npm config set registry <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a></p><h2 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p>安装 Node.js 的最佳方式是使用 nvm。</p><p>cURL:</p><p>$ curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>Wget:</p><p>$ wget -qO- <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="noopener">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p><p>$ nvm install stable</p><h2 id="npm-安装"><a href="#npm-安装" class="headerlink" title="npm 安装"></a>npm 安装</h2><p>第二种安装方法：</p><p>先安装，nvm，即是Node Version Manager(Node版本管理器)</p><p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh</a> | bash<br> 或者使用  wget</p><p>wget -qO- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh</a> | bash<br>之后需要激活nvm:</p><p>$ source ~/.nvm/nvm.sh<br>激活完成后，安装node</p><p>nvm install node<br>安装完成后，切换到该版本</p><p>nvm use node</p><h2 id="建立软连接"><a href="#建立软连接" class="headerlink" title="建立软连接"></a>建立软连接</h2><h2 id="运行node项目时报错：-usr-bin-env-node-No-such-file-or-directory"><a href="#运行node项目时报错：-usr-bin-env-node-No-such-file-or-directory" class="headerlink" title="运行node项目时报错：/usr/bin/env: node: No such file or directory"></a>运行node项目时报错：/usr/bin/env: node: No such file or directory</h2><p>ln -s /usr/bin/nodejs /usr/bin/node</p><h2 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line"><span class="meta">#</span><span class="bash"> 升级npm</span></span><br><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure><blockquote><p>参考：</p><ul><li><a href=""></a></li></ul></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文介绍如何使用Jekyll admin。&lt;/p&gt;
+      &lt;p&gt;本文介绍nvm、npm的一般安装方法！&lt;/p&gt;
     
     </summary>
     
-      <category term="github-page" scheme="https://hexo.wangkaimin.com/categories/github-page/"/>
-    
-    
-      <category term="jekyll" scheme="https://hexo.wangkaimin.com/tags/jekyll/"/>
     
   </entry>
   
   <entry>
     <title>源码编译：ubuntu14.04下编译mysql</title>
-    <link href="https://hexo.wangkaimin.com/mysql/2018-09-09-ompile-code-of-mysql/"/>
-    <id>https://hexo.wangkaimin.com/mysql/2018-09-09-ompile-code-of-mysql/</id>
+    <link href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/"/>
+    <id>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/</id>
     <published>2018-09-09T15:30:00.000Z</published>
     <updated>2018-09-17T02:56:02.000Z</updated>
     
@@ -432,26 +432,26 @@
   </entry>
   
   <entry>
-    <title>掌握linux命令：ifconfig</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-ifconfig/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-ifconfig/</id>
+    <title>掌握git：git tag 批量删除</title>
+    <link href="https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/"/>
+    <id>https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/</id>
     <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:22:04.757Z</updated>
+    <updated>2018-09-21T05:29:26.224Z</updated>
     
-    <content type="html"><![CDATA[<p>本文介绍ifconfig命令的使用方法！</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>本文介绍了git tag的批量删除的使用方法！</p><a id="more"></a><h2 id="删除以d-开头的tag"><a href="#删除以d-开头的tag" class="headerlink" title="删除以d_开头的tag"></a><strong>删除以d_开头的tag</strong></h2><h3 id="方法一：git-tag-push-tagName"><a href="#方法一：git-tag-push-tagName" class="headerlink" title="方法一：git tag push :tagName"></a>方法一：git tag push :<em>tagName</em></h3><p><code>git show-ref --tag | awk &#39;/\/d_/ {print &quot;:&quot;$2}&#39; | xargs git push origin</code></p><h3 id="方法二：git-tag-d-tagName"><a href="#方法二：git-tag-d-tagName" class="headerlink" title="方法二：git tag -d tagName"></a>方法二：git tag -d <em>tagName</em></h3><p><code>git tag | grep ^d_ | xargs git tag -d</code></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文介绍ifconfig命令的使用方法！&lt;/p&gt;
+      &lt;p&gt;本文介绍了git tag的批量删除的使用方法！&lt;/p&gt;
     
     </summary>
     
-      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
+      <category term="git" scheme="https://hexo.wangkaimin.com/categories/git/"/>
     
     
-      <category term="linux shell" scheme="https://hexo.wangkaimin.com/tags/linux-shell/"/>
+      <category term="git" scheme="https://hexo.wangkaimin.com/tags/git/"/>
+    
+      <category term="git-tag" scheme="https://hexo.wangkaimin.com/tags/git-tag/"/>
     
   </entry>
   

@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="git,git-branch," />
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="本文介绍了git branch的删除的使用方法！">
-<meta name="keywords" content="git,git-branch">
+<meta name="description" content="在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。">
+<meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="掌握git：git branch 删除">
-<meta property="og:url" content="https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/index.html">
+<meta property="og:title" content="源码编译：ubuntu14.04下编译mysql">
+<meta property="og:url" content="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/index.html">
 <meta property="og:site_name" content="我的笔记本">
-<meta property="og:description" content="本文介绍了git branch的删除的使用方法！">
+<meta property="og:description" content="在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T05:29:32.550Z">
+<meta property="og:updated_time" content="2018-09-17T02:56:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="掌握git：git branch 删除">
-<meta name="twitter:description" content="本文介绍了git branch的删除的使用方法！">
+<meta name="twitter:title" content="源码编译：ubuntu14.04下编译mysql">
+<meta name="twitter:description" content="在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/"/>
+  <link rel="canonical" href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/"/>
 
 
 
 
 
-  <title>掌握git：git branch 删除 | 我的笔记本</title>
+  <title>源码编译：ubuntu14.04下编译mysql | 我的笔记本</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wangkaimin">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">掌握git：git branch 删除</h1>
+          <h1 class="post-title" itemprop="name headline">源码编译：ubuntu14.04下编译mysql</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T19:30:00+08:00">
-                2018-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T23:30:00+08:00">
+                2018-09-09
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
 
@@ -353,9 +353,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/git/2018-09-20-git-branch-delete/#comments" itemprop="discussionUrl">
+                <a href="/mysql/compile-code-of-mysql/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="git/2018-09-20-git-branch-delete/" itemprop="commentCount"></span>
+                        data-disqus-identifier="mysql/compile-code-of-mysql/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -363,7 +363,7 @@
 
           
           
-             <span id="/git/2018-09-20-git-branch-delete/" class="leancloud_visitors" data-flag-title="掌握git：git branch 删除">
+             <span id="/mysql/compile-code-of-mysql/" class="leancloud_visitors" data-flag-title="源码编译：ubuntu14.04下编译mysql">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  39
+                  793
                 </span>
               
 
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -430,10 +430,27 @@
       
 
       
-        <p>本文介绍了git branch的删除的使用方法！</p>
+        <p>在Ubuntu 14.04下通过mysql源码编译mysql，主要包括搭建环境、配置相关以及编译过程中遇到的问题。</p>
 <a id="more"></a>
-<h3 id="删除本地分支"><a href="#删除本地分支" class="headerlink" title="删除本地分支"></a>删除本地分支</h3><p><code>git branch -d branch_name</code></p>
-<h3 id="删除远程分支（注意冒号）"><a href="#删除远程分支（注意冒号）" class="headerlink" title="删除远程分支（注意冒号）"></a>删除远程分支（注意冒号）</h3><p><code>git push origin :branch_name</code></p>
+<h2 id="1、下载源码："><a href="#1、下载源码：" class="headerlink" title="1、下载源码："></a>1、下载源码：</h2><p><code>wget -c http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.31.tar.gz</code></p>
+<h2 id="2、解压"><a href="#2、解压" class="headerlink" title="2、解压"></a>2、解压</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar zxf mysql-5.6.31.tar.gz</span><br><span class="line">cd mysql-5.6.31</span><br></pre></td></tr></table></figure>
+<h2 id="3、cmake"><a href="#3、cmake" class="headerlink" title="3、cmake"></a>3、cmake</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install cmake</span><br><span class="line">cmake .</span><br></pre></td></tr></table></figure>
+<p>因为缺少依赖，会报如下错误：第12行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">-- Running cmake version 2.8.12.2</span><br><span class="line">-- Could NOT find Git (missing:  GIT_EXECUTABLE)</span><br><span class="line">-- MySQL 5.6.31</span><br><span class="line">-- Packaging as: mysql-5.6.31-Linux-x86_64</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- Could NOT find Curses (missing:  CURSES_LIBRARY CURSES_INCLUDE_PATH)</span><br><span class="line">CMake Error at cmake/readline.cmake:85 (MESSAGE):</span><br><span class="line">  Curses library not found.  Please install appropriate package,</span><br><span class="line"> </span><br><span class="line">      remove CMakeCache.txt and rerun cmake.On Debian/Ubuntu, package name is libncurses5-dev, on Redhat and derivates it is ncurses-devel.</span><br><span class="line">Call Stack (most recent call first):</span><br><span class="line">  cmake/readline.cmake:128 (FIND_CURSES)</span><br><span class="line">  cmake/readline.cmake:202 (MYSQL_USE_BUNDLED_EDITLINE)</span><br><span class="line">  CMakeLists.txt:421 (MYSQL_CHECK_EDITLINE)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">See also &quot;/root/download/mysql-5.6.31/CMakeFiles/CMakeOutput.log&quot;.</span><br><span class="line">See also &quot;/root/download/mysql-5.6.31/CMakeFiles/CMakeError.log&quot;.</span><br></pre></td></tr></table></figure></p>
+<p><code>apt-get install git libncurses5-dev</code><br>继续cmake<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm CMakeCache.txt</span><br><span class="line">cmake .</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">-- Running cmake version 2.8.12.2</span><br><span class="line">-- Found Git: /usr/bin/git (found version &quot;1.9.1&quot;)</span><br><span class="line">-- MySQL 5.6.31</span><br><span class="line">-- Packaging as: mysql-5.6.31-Linux-x86_64</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- HAVE_VISIBILITY_HIDDEN</span><br><span class="line">-- Using cmake version 2.8.12.2</span><br><span class="line">-- Not building NDB</span><br><span class="line">-- Library mysqlclient depends on OSLIBS -lpthread;m;dl</span><br><span class="line">Warning: Bison executable not found in PATH</span><br><span class="line">-- Library mysqlserver depends on OSLIBS -lpthread;m;crypt;dl</span><br><span class="line">-- CMAKE_BUILD_TYPE: RelWithDebInfo</span><br><span class="line">-- COMPILE_DEFINITIONS: HAVE_CONFIG_H</span><br><span class="line">-- CMAKE_C_FLAGS:  -Wall -Wextra -Wformat-security -Wvla -Wwrite-strings -Wdeclaration</span><br><span class="line">-- CMAKE_CXX_FLAGS:  -Wall -Wextra -Wformat-security -Wvla -Woverloaded-virtual -Wno-u</span><br><span class="line">-- CMAKE_C_FLAGS_RELWITHDEBINFO: -O3 -g -fabi-version=2 -fno-omit-frame-pointer -fno-s</span><br><span class="line">-- CMAKE_CXX_FLAGS_RELWITHDEBINFO: -O3 -g -fabi-version=2 -fno-omit-frame-pointer -fno</span><br><span class="line">-- Configuring done</span><br><span class="line">-- Generating done</span><br><span class="line">-- Build files have been written to: /root/download/mysql-5.6.31</span><br></pre></td></tr></table></figure>
+<p>消除11行的警告<br><code>apt-get install bison</code><br>继续cmake，其实前面都是在探路，真正的cmake如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cmake \</span><br><span class="line">-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \</span><br><span class="line">-DMYSQL_DATADIR=/var/mysql/data \</span><br><span class="line">-DSYSCONFDIR=/etc \</span><br><span class="line">-DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_MEMORY_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_READLINE=1 \</span><br><span class="line">-DMYSQL_UNIX_ADDR=/tmp/mysqld.sock \</span><br><span class="line">-DMYSQL_TCP_PORT=3306 \</span><br><span class="line">-DENABLED_LOCAL_INFILE=1 \</span><br><span class="line">-DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line">-DEXTRA_CHARSETS=all \</span><br><span class="line">-DDEFAULT_CHARSET=utf8 \</span><br><span class="line">-DDEFAULT_COLLATION=utf8_general_ci \</span><br><span class="line">-DMYSQL_USER=mysql \</span><br></pre></td></tr></table></figure>
+<p>还是会有如下警告的：估计这三个参数不能使用，去掉即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CMake Warning:</span><br><span class="line">  Manually-specified variables were not used by the project:</span><br><span class="line"> </span><br><span class="line">    MYSQL_USER</span><br><span class="line">    WITH_MEMORY_STORAGE_ENGINE</span><br><span class="line">    WITH_READLINE</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">-- Build files have been written to: /root/download/mysql/mysql-5.6.31</span><br></pre></td></tr></table></figure></p>
+<p>注解：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">cmake \</span><br><span class="line"># 安装路径 \</span><br><span class="line">-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \</span><br><span class="line"># 数据库文件存放位置 \</span><br><span class="line">-DMYSQL_DATADIR=/var/mysql/data \</span><br><span class="line"># my.cnf路径 \</span><br><span class="line">-DSYSCONFDIR=/etc \</span><br><span class="line"># 分别支持MyIASM、InnoDB、Memory引擎 \</span><br><span class="line">-DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">-DWITH_MEMORY_STORAGE_ENGINE=1 \</span><br><span class="line"># 允许从本地导入数据 \</span><br><span class="line">-DWITH_READLINE=1 \</span><br><span class="line"># 监听socket路径 \</span><br><span class="line">-DMYSQL_UNIX_ADDR=/tmp/mysqld.sock \</span><br><span class="line"># 端口 \</span><br><span class="line">-DMYSQL_TCP_PORT=3306 \</span><br><span class="line">-DENABLED_LOCAL_INFILE=1 \</span><br><span class="line"># 支持数据库分区 \</span><br><span class="line">-DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line"># 安装所有的字符集 \</span><br><span class="line">-DEXTRA_CHARSETS=all \</span><br><span class="line"># 默认字符集 \</span><br><span class="line">-DDEFAULT_CHARSET=utf8 \</span><br><span class="line"># 设置服务器的排序规则 \</span><br><span class="line">-DDEFAULT_COLLATION=utf8_general_ci \</span><br><span class="line"># \</span><br><span class="line">-DMYSQL_USER=mysql \</span><br></pre></td></tr></table></figure></p>
+<h2 id="4、各种设置、编译安装（非常重要）"><a href="#4、各种设置、编译安装（非常重要）" class="headerlink" title="4、各种设置、编译安装（非常重要）"></a>4、各种设置、编译安装（非常重要）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#用户、目录设置</span><br><span class="line">groupadd mysql</span><br><span class="line">useradd -g mysql mysql</span><br><span class="line">mkdir -p /var/mysql/</span><br><span class="line">mkdir -p /var/mysql/data/</span><br><span class="line">mkdir -p /var/mysql/log/</span><br><span class="line"> </span><br><span class="line">#拥有者和群组设置</span><br><span class="line">#chmod +w /usr/local/mysql</span><br><span class="line">chown -R mysql:mysql /usr/local/mysql</span><br><span class="line">chown -R mysql:mysql /var/mysql/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib/libmysqlclient.so.18</span><br><span class="line"> </span><br><span class="line">#copy默认配置</span><br><span class="line">cp support-files/my-default.cnf /etc/my.cnf</span><br><span class="line">cp support-files/mysql.server /etc/init.d/mysqld</span><br><span class="line"> </span><br><span class="line">#MySQL初始化安装</span><br><span class="line">/usr/local/mysql/scripts/mysql_install_db --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql --datadir=/var/mysql/data --user=mysql</span><br><span class="line"> </span><br><span class="line">#启动mysql</span><br><span class="line">service mysqld start</span><br><span class="line"> </span><br><span class="line">#设置开机启动</span><br><span class="line">chmod +x /etc/init.d/mysqld</span><br><span class="line">update-rc.d /etc/init.d/mysqld defaults</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#设置PATH 增加 export PATH=$PATH:/usr/local/mysql/bin</span><br><span class="line">vim /etc/profile</span><br><span class="line">#使之生效</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ul>
+<li><a href="https://blog.phpha.com/backup/archives/1685.html" target="_blank" rel="noopener">Ubuntu-14.04编译安装MySQL-5.6.16</a></li>
+<li><a href="http://blog.csdn.net/wendi_0506/article/details/39478369" target="_blank" rel="noopener">Linux CentOS6.5下编译安装MySQL 5.6.16【给力详细教程】</a></li>
+<li><a href="http://blog.csdn.net/zqtsx/article/details/9378703" target="_blank" rel="noopener">Linux源码安装mysql 5.6.12 （cmake编译）</a></li>
+</ul>
 
       
     </div>
@@ -454,7 +471,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/" title="掌握git：git branch 删除">https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/</a>
+    <a href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/" title="源码编译：ubuntu14.04下编译mysql">https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -469,9 +486,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
-            <a href="/tags/git-branch/" rel="tag"># git-branch</a>
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
           
         </div>
       
@@ -484,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/redis/2018-09-19-no-such-method-error/" rel="next" title="NoSuchMethodError 解决思路">
-                <i class="fa fa-chevron-left"></i> NoSuchMethodError 解决思路
+              <a href="/git/github/2018-09-08-github-page-disqus/" rel="next" title="部署github page：jekyll整合disqus评论系统">
+                <i class="fa fa-chevron-left"></i> 部署github page：jekyll整合disqus评论系统
               </a>
             
           </div>
@@ -494,8 +509,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/linux/shell/linux-shell-sed/" rel="prev" title="掌握linux命令：sed">
-                掌握linux命令：sed <i class="fa fa-chevron-right"></i>
+              <a href="/ubuntu/nvm-node-npm-install/" rel="prev" title="Node安装：nvm、npm的安装方法">
+                Node安装：nvm、npm的安装方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -673,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除本地分支"><span class="nav-number">1.</span> <span class="nav-text">删除本地分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除远程分支（注意冒号）"><span class="nav-number">2.</span> <span class="nav-text">删除远程分支（注意冒号）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、下载源码："><span class="nav-number">1.</span> <span class="nav-text">1、下载源码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、解压"><span class="nav-number">2.</span> <span class="nav-text">2、解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、cmake"><span class="nav-number">3.</span> <span class="nav-text">3、cmake</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、各种设置、编译安装（非常重要）"><span class="nav-number">4.</span> <span class="nav-text">4、各种设置、编译安装（非常重要）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
@@ -872,9 +887,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/';
-          this.page.identifier = 'git/2018-09-20-git-branch-delete/';
-          this.page.title = '掌握git：git branch 删除';
+          this.page.url = 'https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/';
+          this.page.identifier = 'mysql/compile-code-of-mysql/';
+          this.page.title = '源码编译：ubuntu14.04下编译mysql';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://hexo-io.disqus.com/embed.js';

@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.wangkaimin.com/404/index.html</loc>
+    
+    <lastmod>2018-09-22T05:43:08.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/404.html</loc>
+    
+    <lastmod>2018-09-22T05:35:27.584Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/about/index.html</loc>
+    
+    <lastmod>2018-09-22T05:26:51.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/</loc>
+    
+    <lastmod>2018-09-22T05:15:24.229Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/</loc>
+    
+    <lastmod>2018-09-22T05:12:51.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.wangkaimin.com/temp/password/</loc>
     
     <lastmod>2018-09-21T19:52:41.378Z</lastmod>
@@ -12,13 +47,6 @@
     <loc>https://hexo.wangkaimin.com/temp/raw/</loc>
     
     <lastmod>2018-09-21T19:48:00.804Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/about/index.html</loc>
-    
-    <lastmod>2018-09-21T19:29:30.266Z</lastmod>
     
   </url>
   
@@ -114,35 +142,35 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-cd/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-cd/</loc>
     
     <lastmod>2018-09-21T05:22:29.099Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-pwd/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-pwd/</loc>
     
     <lastmod>2018-09-21T05:22:04.764Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-top/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-top/</loc>
     
     <lastmod>2018-09-21T05:22:04.762Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-ls/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ls/</loc>
     
     <lastmod>2018-09-21T05:22:04.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/2018-09-07-linux-shell-ifconfig/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ifconfig/</loc>
     
     <lastmod>2018-09-21T05:22:04.757Z</lastmod>
     
@@ -191,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/ubuntu/2018-09-17-change-timezone-in-linux/</loc>
-    
-    <lastmod>2018-09-17T10:17:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hexo.wangkaimin.com/sogou/note/2018-09-01-todo-list/</loc>
     
     <lastmod>2018-09-17T03:05:04.000Z</lastmod>
@@ -205,14 +226,7 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/ubuntu/2018-09-10-nvm-node-npm-install/</loc>
-    
-    <lastmod>2018-09-17T02:57:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/mysql/2018-09-09-ompile-code-of-mysql/</loc>
+    <loc>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/</loc>
     
     <lastmod>2018-09-17T02:56:02.000Z</lastmod>
     
