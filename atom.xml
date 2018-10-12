@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexo.wangkaimin.com/"/>
-  <updated>2018-09-25T08:13:37.041Z</updated>
+  <updated>2018-10-08T03:28:51.182Z</updated>
   <id>https://hexo.wangkaimin.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring boot构建docker image</title>
+    <link href="https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/"/>
+    <id>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/</id>
+    <published>2018-10-08T03:28:51.182Z</published>
+    <updated>2018-10-08T03:28:51.182Z</updated>
+    
+    <content type="html"><![CDATA[<p>方法一：</p><blockquote><p>dockerfile-maven-plugin</p></blockquote><p>需要dockerfile:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM openjdk:8-jdk-alpine</span><br><span class="line">VOLUME /tmp</span><br><span class="line">ARG JAR_FILE</span><br><span class="line">COPY $&#123;JAR_FILE&#125; app.jar</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-Djava.security.egd=file:/dev/./urandom&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;dependencies&gt;</span><br><span class="line">                &lt;dependency&gt;</span><br><span class="line">                    &lt;groupId&gt;javax.activation&lt;/groupId&gt;</span><br><span class="line">                    &lt;artifactId&gt;activation&lt;/artifactId&gt;</span><br><span class="line">                    &lt;version&gt;1.1.1&lt;/version&gt;</span><br><span class="line">                &lt;/dependency&gt;</span><br><span class="line">            &lt;/dependencies&gt;</span><br><span class="line">            &lt;groupId&gt;com.spotify&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;dockerfile-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.4.4&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;repository&gt;$&#123;docker.image.prefix&#125;/$&#123;project.artifactId&#125;&lt;/repository&gt;</span><br><span class="line">                &lt;buildArgs&gt;</span><br><span class="line">                    &lt;JAR_FILE&gt;target/$&#123;project.build.finalName&#125;.jar&lt;/JAR_FILE&gt;</span><br><span class="line">                &lt;/buildArgs&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure><p>方法二：官方已经不推荐了</p><blockquote><p><a href="https://github.com/spotify/docker-maven-plugin" target="_blank" rel="noopener">https://github.com/spotify/docker-maven-plugin</a><br>Status: bug-fix only<br>We recommend that new projects use dockerfile-maven.<br>This project will no longer have new features or accept PRs for new features.<br>We will continue to accept bug fixes, however.<br>遇到的问题：<a href="https://github.com/spotify/dockerfile-maven/issues/90" target="_blank" rel="noopener">https://github.com/spotify/dockerfile-maven/issues/90</a></p></blockquote><p>父pom<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;dependencies&gt;</span><br><span class="line">                &lt;dependency&gt;</span><br><span class="line">                    &lt;groupId&gt;javax.activation&lt;/groupId&gt;</span><br><span class="line">                    &lt;artifactId&gt;activation&lt;/artifactId&gt;</span><br><span class="line">                    &lt;version&gt;1.1.1&lt;/version&gt;</span><br><span class="line">                &lt;/dependency&gt;</span><br><span class="line">            &lt;/dependencies&gt;</span><br><span class="line">            &lt;groupId&gt;com.spotify&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.1.1&lt;/version&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;imageName&gt;$&#123;docker.image.prefix&#125;/$&#123;project.artifactId&#125;&lt;/imageName&gt;</span><br><span class="line">                &lt;baseImage&gt;java&lt;/baseImage&gt;</span><br><span class="line">                &lt;entryPoint&gt;[&quot;java&quot;, &quot;-jar&quot;, &quot;/$&#123;project.build.finalName&#125;.jar&quot;]&lt;/entryPoint&gt;</span><br><span class="line">                &lt;resources&gt;</span><br><span class="line">                    &lt;resource&gt;</span><br><span class="line">                        &lt;targetPath&gt;/&lt;/targetPath&gt;</span><br><span class="line">                        &lt;directory&gt;$&#123;project.build.directory&#125;&lt;/directory&gt;</span><br><span class="line">                        &lt;include&gt;$&#123;project.build.finalName&#125;.jar&lt;/include&gt;</span><br><span class="line">                    &lt;/resource&gt;</span><br><span class="line">                &lt;/resources&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure></p><p>常用脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line">mvn -Dmaven.test.skip=<span class="literal">true</span> clean package docker:build</span><br><span class="line"></span><br><span class="line">docker swarm leave</span><br><span class="line">docker swarm init</span><br><span class="line">docker network create winter_winter --driver overlay --scope=swarm</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;方法一：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dockerfile-maven-plugin&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需要dockerfile:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Fitness sales collection</title>
@@ -108,8 +133,8 @@
   
   <entry>
     <title>掌握git：git branch 删除</title>
-    <link href="https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/"/>
-    <id>https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/</id>
+    <link href="https://hexo.wangkaimin.com/git/git-branch-delete/"/>
+    <id>https://hexo.wangkaimin.com/git/git-branch-delete/</id>
     <published>2018-09-20T11:30:00.000Z</published>
     <updated>2018-09-21T05:29:32.550Z</updated>
     
@@ -345,8 +370,8 @@
   
   <entry>
     <title>掌握git：git tag 批量删除</title>
-    <link href="https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/"/>
-    <id>https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/</id>
+    <link href="https://hexo.wangkaimin.com/git/git-tag-delete/"/>
+    <id>https://hexo.wangkaimin.com/git/git-tag-delete/</id>
     <published>2018-09-07T08:00:00.000Z</published>
     <updated>2018-09-21T05:29:26.224Z</updated>
     
@@ -364,32 +389,6 @@
       <category term="git" scheme="https://hexo.wangkaimin.com/tags/git/"/>
     
       <category term="git-tag" scheme="https://hexo.wangkaimin.com/tags/git-tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掌握linux命令：pwd</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-pwd/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-pwd/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:22:04.764Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍pwd命令的使用方法！</p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍pwd命令的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
-    
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
     
   </entry>
   

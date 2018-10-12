@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/</loc>
+    
+    <lastmod>2018-10-08T03:28:51.182Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/git/git-svn/</loc>
+    
+    <lastmod>2018-09-28T10:50:14.780Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.wangkaimin.com/ppt/fitness-sales-collection/</loc>
     
     <lastmod>2018-09-25T08:13:37.041Z</lastmod>
@@ -79,35 +93,28 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/2018-09-20-git-branch-delete/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-branch-delete/</loc>
     
     <lastmod>2018-09-21T05:29:32.550Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/2018-09-06-git-svn/</loc>
-    
-    <lastmod>2018-09-21T05:29:26.226Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/git/2018-09-07-git-tag-delete/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-tag-delete/</loc>
     
     <lastmod>2018-09-21T05:29:26.224Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/2018-09-05-git-svn-mac-error/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-svn-mac-error/</loc>
     
     <lastmod>2018-09-21T05:29:26.222Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/submodule/2018-09-07-git-submodule/</loc>
+    <loc>https://hexo.wangkaimin.com/git/submodule/git-submodule/</loc>
     
     <lastmod>2018-09-21T05:29:26.219Z</lastmod>
     
