@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hexo.wangkaimin.com/"/>
-  <updated>2018-10-08T03:28:51.182Z</updated>
+  <updated>2018-12-29T04:28:16.927Z</updated>
   <id>https://hexo.wangkaimin.com/</id>
   
   <author>
@@ -17,9 +17,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Resin error</title>
+    <link href="https://hexo.wangkaimin.com/temp/resin.html"/>
+    <id>https://hexo.wangkaimin.com/temp/resin.html</id>
+    <published>2018-12-28T16:00:00.000Z</published>
+    <updated>2018-12-29T04:28:16.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="resin-error"><a href="#resin-error" class="headerlink" title="resin error"></a>resin error</h3><p>500 Servlet Exception</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac compiler is not available in Java(TM) SE Runtime Environment 1.7.0_79-b15.</span><br><span class="line">Check that you are using the JDK, not the JRE.</span><br></pre></td></tr></table></figure><hr><p>Resin/4.0.44 Server: ‘app-0’</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="http://blog.51cto.com/leejia/1416895" target="_blank" rel="noopener">http://blog.51cto.com/leejia/1416895</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;resin-error&quot;&gt;&lt;a href=&quot;#resin-error&quot; class=&quot;headerlink&quot; title=&quot;resin error&quot;&gt;&lt;/a&gt;resin error&lt;/h3&gt;&lt;p&gt;500 Servlet Exception&lt;/p&gt;
+&lt;figure 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot JPA 的使用</title>
+    <link href="https://hexo.wangkaimin.com/spring/spring-boot/spring-boot-jpa.html"/>
+    <id>https://hexo.wangkaimin.com/spring/spring-boot/spring-boot-jpa.html</id>
+    <published>2018-12-27T16:00:00.000Z</published>
+    <updated>2018-12-29T04:28:15.313Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Spring-Boot-jpa的使用"><a href="#Spring-Boot-jpa的使用" class="headerlink" title="Spring Boot jpa的使用"></a>Spring Boot jpa的使用</h2><p>说明：spring boot 1.x 和 2.x的使用是不是一样的</p><h3 id="Spring-Boot-2-x"><a href="#Spring-Boot-2-x" class="headerlink" title="Spring Boot 2.x"></a>Spring Boot 2.x</h3><p>配置：参考summer项目</p><h3 id="Spring-Boot-1-x"><a href="#Spring-Boot-1-x" class="headerlink" title="Spring Boot 1.x"></a>Spring Boot 1.x</h3><p>配置：参考bizhome项目</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-Boot-jpa的使用&quot;&gt;&lt;a href=&quot;#Spring-Boot-jpa的使用&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot jpa的使用&quot;&gt;&lt;/a&gt;Spring Boot jpa的使用&lt;/h2&gt;&lt;p&gt;说明：spr
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Spring boot构建docker image</title>
-    <link href="https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/"/>
-    <id>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/</id>
+    <link href="https://hexo.wangkaimin.com/docker/spring/spring-boot-docker.html"/>
+    <id>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker.html</id>
     <published>2018-10-08T03:28:51.182Z</published>
     <updated>2018-10-08T03:28:51.182Z</updated>
     
@@ -42,27 +85,9 @@
   </entry>
   
   <entry>
-    <title>Fitness sales collection</title>
-    <link href="https://hexo.wangkaimin.com/ppt/fitness-sales-collection/"/>
-    <id>https://hexo.wangkaimin.com/ppt/fitness-sales-collection/</id>
-    <published>2018-09-22T13:00:00.000Z</published>
-    <updated>2018-09-25T08:13:37.041Z</updated>
-    
-    <content type="html"><![CDATA[<p>健身销售宝典PPT相关思路</p><a id="more"></a><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>确定几个问题：</p><ol><li>PPT的主题，也就是标题，是<strong>“彩虹行动“计划</strong>，还是<strong>编制各行业 “葵花宝典”</strong>，即<strong>健身销售宝典</strong>？</li><li>健身销售宝典</li></ol><h1 id="确定题目"><a href="#确定题目" class="headerlink" title="确定题目"></a>确定题目</h1><p><strong>《健身销售宝典》</strong></p><h1 id="确定大纲"><a href="#确定大纲" class="headerlink" title="确定大纲"></a>确定大纲</h1><ul><li>公司简介</li><li>行业介绍</li><li>客户分类与客户心理<ul><li>客户分类： <ul><li>传统商业健身房</li><li>健身工作室</li><li>酒店健身房</li><li>地产健身中心</li></ul></li><li>客户心理：<ul><li>围绕客户的需求解决俱乐部的现状与俱乐部投资人关注点。<br>提高私教率<br>激活休眠卡<br>提高续卡率<br>体能测评和人体成分在俱乐部的应用</li></ul></li></ul></li><li>如何寻找客户<ul><li>网络搜寻（健身114、美团、大众点评、百度地图等）</li><li>展会搜集客户信息</li><li>进口器械商和国产器械商软件公司交换信息资源转介绍</li><li>教练培训机构</li><li>老客户转介绍</li></ul></li><li>如何与客户洽谈？</li><li>业务与产品知识<ul><li>添加产品资料ppt</li></ul></li><li>竞品分析<ul><li>表格对比分析补充</li></ul></li><li>销售流程（俱乐部的销售流程）                      </li><li>销售基本动作与技巧</li><li>谈判技巧（注意事项）</li><li>销售人员需具备的基本素质与基本肢体语言</li><li>销售人员仪容仪表与基本礼仪</li><li>销售管理工具<ul><li>钉钉</li><li>销帮帮</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;健身销售宝典PPT相关思路&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>hexo整合disqus</title>
-    <link href="https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus/"/>
-    <id>https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus/</id>
+    <link href="https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus.html"/>
+    <id>https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus.html</id>
     <published>2018-09-21T17:26:54.081Z</published>
     <updated>2018-09-21T17:26:54.081Z</updated>
     
@@ -88,9 +113,30 @@
   </entry>
   
   <entry>
+    <title>解决MacOS升级后出现missing xcrun的问题</title>
+    <link href="https://hexo.wangkaimin.com/mac/xcrun.html"/>
+    <id>https://hexo.wangkaimin.com/mac/xcrun.html</id>
+    <published>2018-09-21T16:00:00.000Z</published>
+    <updated>2018-12-29T04:29:40.322Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.jianshu.com/p/50b6771eb853" target="_blank" rel="noopener">https://www.jianshu.com/p/50b6771eb853</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>batch add text to file head</title>
-    <link href="https://hexo.wangkaimin.com/batch-add-head.sh/"/>
-    <id>https://hexo.wangkaimin.com/batch-add-head.sh/</id>
+    <link href="https://hexo.wangkaimin.com/batch-add-head.sh.html"/>
+    <id>https://hexo.wangkaimin.com/batch-add-head.sh.html</id>
     <published>2018-09-21T04:30:00.000Z</published>
     <updated>2018-09-21T05:17:17.795Z</updated>
     
@@ -107,8 +153,8 @@
   
   <entry>
     <title>掌握linux命令：sed</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/</id>
+    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-sed.html"/>
+    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed.html</id>
     <published>2018-09-21T04:30:00.000Z</published>
     <updated>2018-09-21T05:30:45.428Z</updated>
     
@@ -133,8 +179,8 @@
   
   <entry>
     <title>掌握git：git branch 删除</title>
-    <link href="https://hexo.wangkaimin.com/git/git-branch-delete/"/>
-    <id>https://hexo.wangkaimin.com/git/git-branch-delete/</id>
+    <link href="https://hexo.wangkaimin.com/git/git-branch-delete.html"/>
+    <id>https://hexo.wangkaimin.com/git/git-branch-delete.html</id>
     <published>2018-09-20T11:30:00.000Z</published>
     <updated>2018-09-21T05:29:32.550Z</updated>
     
@@ -157,8 +203,8 @@
   
   <entry>
     <title>NoSuchMethodError 解决思路</title>
-    <link href="https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error/"/>
-    <id>https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error/</id>
+    <link href="https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error.html"/>
+    <id>https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error.html</id>
     <published>2018-09-20T10:31:05.000Z</published>
     <updated>2018-09-20T10:31:05.000Z</updated>
     
@@ -179,8 +225,8 @@
   
   <entry>
     <title>SVN 提交操作</title>
-    <link href="https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit/"/>
-    <id>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit/</id>
+    <link href="https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit.html"/>
+    <id>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit.html</id>
     <published>2018-09-19T08:22:26.000Z</published>
     <updated>2018-09-19T08:22:26.000Z</updated>
     
@@ -203,8 +249,8 @@
   
   <entry>
     <title>如何快速制作一个PPT</title>
-    <link href="https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt/"/>
-    <id>https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt/</id>
+    <link href="https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt.html"/>
+    <id>https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt.html</id>
     <published>2018-09-19T08:00:27.000Z</published>
     <updated>2018-09-19T08:00:27.000Z</updated>
     
@@ -230,8 +276,8 @@
   
   <entry>
     <title>安装hexo，整合github page</title>
-    <link href="https://hexo.wangkaimin.com/install-hexo/"/>
-    <id>https://hexo.wangkaimin.com/install-hexo/</id>
+    <link href="https://hexo.wangkaimin.com/install-hexo.html"/>
+    <id>https://hexo.wangkaimin.com/install-hexo.html</id>
     <published>2018-09-19T05:00:00.000Z</published>
     <updated>2018-09-21T05:18:41.926Z</updated>
     
@@ -248,8 +294,8 @@
   
   <entry>
     <title>iphone4s从9.3.5降级到6.1.3</title>
-    <link href="https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/"/>
-    <id>https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/</id>
+    <link href="https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3.html"/>
+    <id>https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3.html</id>
     <published>2018-09-18T04:03:51.000Z</published>
     <updated>2018-09-18T04:03:51.000Z</updated>
     
@@ -266,8 +312,8 @@
   
   <entry>
     <title>Linux下修改时区</title>
-    <link href="https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/"/>
-    <id>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/</id>
+    <link href="https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux.html"/>
+    <id>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux.html</id>
     <published>2018-09-16T16:00:00.000Z</published>
     <updated>2018-09-22T05:15:24.229Z</updated>
     
@@ -284,8 +330,8 @@
   
   <entry>
     <title>Surface book 2 进入UEFI的方法</title>
-    <link href="https://hexo.wangkaimin.com/microsoft/uefi/"/>
-    <id>https://hexo.wangkaimin.com/microsoft/uefi/</id>
+    <link href="https://hexo.wangkaimin.com/microsoft/uefi.html"/>
+    <id>https://hexo.wangkaimin.com/microsoft/uefi.html</id>
     <published>2018-09-12T06:07:46.000Z</published>
     <updated>2018-09-12T06:07:46.000Z</updated>
     
@@ -306,8 +352,8 @@
   
   <entry>
     <title>Node安装：nvm、npm的安装方法</title>
-    <link href="https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/"/>
-    <id>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/</id>
+    <link href="https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install.html"/>
+    <id>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install.html</id>
     <published>2018-09-09T16:00:00.000Z</published>
     <updated>2018-09-22T05:12:51.382Z</updated>
     
@@ -324,8 +370,8 @@
   
   <entry>
     <title>源码编译：ubuntu14.04下编译mysql</title>
-    <link href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/"/>
-    <id>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/</id>
+    <link href="https://hexo.wangkaimin.com/mysql/compile-code-of-mysql.html"/>
+    <id>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql.html</id>
     <published>2018-09-09T15:30:00.000Z</published>
     <updated>2018-09-17T02:56:02.000Z</updated>
     
@@ -345,83 +391,9 @@
   </entry>
   
   <entry>
-    <title>掌握linux命令：ifconfig</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-ifconfig/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-ifconfig/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:22:04.757Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍ifconfig命令的使用方法！</p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍ifconfig命令的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
-    
-    
-      <category term="linux shell" scheme="https://hexo.wangkaimin.com/tags/linux-shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掌握git：git tag 批量删除</title>
-    <link href="https://hexo.wangkaimin.com/git/git-tag-delete/"/>
-    <id>https://hexo.wangkaimin.com/git/git-tag-delete/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:29:26.224Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍了git tag的批量删除的使用方法！</p><a id="more"></a><h2 id="删除以d-开头的tag"><a href="#删除以d-开头的tag" class="headerlink" title="删除以d_开头的tag"></a><strong>删除以d_开头的tag</strong></h2><h3 id="方法一：git-tag-push-tagName"><a href="#方法一：git-tag-push-tagName" class="headerlink" title="方法一：git tag push :tagName"></a>方法一：git tag push :<em>tagName</em></h3><p><code>git show-ref --tag | awk &#39;/\/d_/ {print &quot;:&quot;$2}&#39; | xargs git push origin</code></p><h3 id="方法二：git-tag-d-tagName"><a href="#方法二：git-tag-d-tagName" class="headerlink" title="方法二：git tag -d tagName"></a>方法二：git tag -d <em>tagName</em></h3><p><code>git tag | grep ^d_ | xargs git tag -d</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍了git tag的批量删除的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="https://hexo.wangkaimin.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="https://hexo.wangkaimin.com/tags/git/"/>
-    
-      <category term="git-tag" scheme="https://hexo.wangkaimin.com/tags/git-tag/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>掌握linux命令：top</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-top/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-top/</id>
-    <published>2018-09-07T08:00:00.000Z</published>
-    <updated>2018-09-21T05:22:04.762Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文介绍top命令的使用方法！</p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文介绍top命令的使用方法！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
-    
-    
-      <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
-    
-      <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
     <title>掌握linux命令：ls</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-ls/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-ls/</id>
+    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-ls.html"/>
+    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-ls.html</id>
     <published>2018-09-07T08:00:00.000Z</published>
     <updated>2018-09-21T05:22:04.760Z</updated>
     
@@ -445,9 +417,35 @@
   </entry>
   
   <entry>
+    <title>掌握linux命令：top</title>
+    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-top.html"/>
+    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-top.html</id>
+    <published>2018-09-07T08:00:00.000Z</published>
+    <updated>2018-09-21T05:22:04.762Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文介绍top命令的使用方法！</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文介绍top命令的使用方法！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="https://hexo.wangkaimin.com/categories/linux/"/>
+    
+      <category term="shell" scheme="https://hexo.wangkaimin.com/categories/linux/shell/"/>
+    
+    
+      <category term="linux" scheme="https://hexo.wangkaimin.com/tags/linux/"/>
+    
+      <category term="shell" scheme="https://hexo.wangkaimin.com/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>掌握linux命令：cd</title>
-    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-cd/"/>
-    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-cd/</id>
+    <link href="https://hexo.wangkaimin.com/linux/shell/linux-shell-cd.html"/>
+    <id>https://hexo.wangkaimin.com/linux/shell/linux-shell-cd.html</id>
     <published>2018-09-07T08:00:00.000Z</published>
     <updated>2018-09-21T05:22:29.099Z</updated>
     

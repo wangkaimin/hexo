@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker/</loc>
+    <loc>https://hexo.wangkaimin.com/mac/xcrun.html</loc>
+    
+    <lastmod>2018-12-29T04:29:40.322Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/temp/resin.html</loc>
+    
+    <lastmod>2018-12-29T04:28:16.927Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/spring/spring-boot/spring-boot-jpa.html</loc>
+    
+    <lastmod>2018-12-29T04:28:15.313Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/git/git-svn.html</loc>
+    
+    <lastmod>2018-10-16T02:28:58.758Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/docker/spring/spring-boot-docker.html</loc>
     
     <lastmod>2018-10-08T03:28:51.182Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/git/git-svn/</loc>
-    
-    <lastmod>2018-09-28T10:50:14.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/ppt/fitness-sales-collection/</loc>
-    
-    <lastmod>2018-09-25T08:13:37.041Z</lastmod>
     
   </url>
   
@@ -44,21 +58,21 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux/</loc>
+    <loc>https://hexo.wangkaimin.com/ubuntu/change-timezone-in-linux.html</loc>
     
     <lastmod>2018-09-22T05:15:24.229Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install/</loc>
+    <loc>https://hexo.wangkaimin.com/ubuntu/nvm-node-npm-install.html</loc>
     
     <lastmod>2018-09-22T05:12:51.382Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/markdown-info/</loc>
+    <loc>https://hexo.wangkaimin.com/markdown-info.html</loc>
     
     <lastmod>2018-09-21T19:28:46.698Z</lastmod>
     
@@ -79,133 +93,133 @@
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus/</loc>
+    <loc>https://hexo.wangkaimin.com/blog/hexo/hexo-next-integrate-disqus.html</loc>
     
     <lastmod>2018-09-21T17:26:54.081Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-sed.html</loc>
     
     <lastmod>2018-09-21T05:30:45.428Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/git-branch-delete/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-branch-delete.html</loc>
     
     <lastmod>2018-09-21T05:29:32.550Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/git-tag-delete/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-tag-delete.html</loc>
     
     <lastmod>2018-09-21T05:29:26.224Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/git-svn-mac-error/</loc>
+    <loc>https://hexo.wangkaimin.com/git/git-svn-mac-error.html</loc>
     
     <lastmod>2018-09-21T05:29:26.222Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/git/submodule/git-submodule/</loc>
+    <loc>https://hexo.wangkaimin.com/git/submodule/git-submodule.html</loc>
     
     <lastmod>2018-09-21T05:29:26.219Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-cd/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-cd.html</loc>
     
     <lastmod>2018-09-21T05:22:29.099Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-pwd/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-pwd.html</loc>
     
     <lastmod>2018-09-21T05:22:04.764Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-top/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-top.html</loc>
     
     <lastmod>2018-09-21T05:22:04.762Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ls/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ls.html</loc>
     
     <lastmod>2018-09-21T05:22:04.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ifconfig/</loc>
+    <loc>https://hexo.wangkaimin.com/linux/shell/linux-shell-ifconfig.html</loc>
     
     <lastmod>2018-09-21T05:22:04.757Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/install-hexo/</loc>
+    <loc>https://hexo.wangkaimin.com/install-hexo.html</loc>
     
     <lastmod>2018-09-21T05:18:41.926Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/batch-add-head.sh/</loc>
+    <loc>https://hexo.wangkaimin.com/batch-add-head.sh.html</loc>
     
     <lastmod>2018-09-21T05:17:17.795Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error/</loc>
+    <loc>https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error.html</loc>
     
     <lastmod>2018-09-20T10:31:05.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit/</loc>
+    <loc>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit.html</loc>
     
     <lastmod>2018-09-19T08:22:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt/</loc>
+    <loc>https://hexo.wangkaimin.com/ppt/2018-09-12-create-ppt.html</loc>
     
     <lastmod>2018-09-19T08:00:27.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3/</loc>
+    <loc>https://hexo.wangkaimin.com/apple/2018-09-18-iphone-4s-ios-downgrade-to-6.1.3.html</loc>
     
     <lastmod>2018-09-18T04:03:51.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql/</loc>
+    <loc>https://hexo.wangkaimin.com/mysql/compile-code-of-mysql.html</loc>
     
     <lastmod>2018-09-17T02:56:02.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hexo.wangkaimin.com/microsoft/uefi/</loc>
+    <loc>https://hexo.wangkaimin.com/microsoft/uefi.html</loc>
     
     <lastmod>2018-09-12T06:07:46.000Z</lastmod>
     
