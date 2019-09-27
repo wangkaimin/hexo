@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="个人笔记本, 技术博客">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="我的笔记本" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="macOS123brew install srtbrew upgrade srt 1234567891011121314Possible conflicting files are:/usr/local/bin/srt-ffplay/usr/local/bin/srt-file-transmit/usr/local/bin/srt-live-transmit/usr/local/bin/srt-t">
+<meta name="keywords" content="笔记本,技术博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装ffmpeg">
+<meta property="og:url" content="https://hexo.wangkaimin.com/ffmpeg/compile/install.html">
+<meta property="og:site_name" content="我的笔记本">
+<meta property="og:description" content="macOS123brew install srtbrew upgrade srt 1234567891011121314Possible conflicting files are:/usr/local/bin/srt-ffplay/usr/local/bin/srt-file-transmit/usr/local/bin/srt-live-transmit/usr/local/bin/srt-t">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-27T09:12:12.563Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装ffmpeg">
+<meta name="twitter:description" content="macOS123brew install srtbrew upgrade srt 1234567891011121314Possible conflicting files are:/usr/local/bin/srt-ffplay/usr/local/bin/srt-file-transmit/usr/local/bin/srt-live-transmit/usr/local/bin/srt-t">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hexo.wangkaimin.com/ffmpeg/compile/install.html">
+
+
+
+
+
+  <title>安装ffmpeg | 我的笔记本</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的笔记本</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/ffmpeg/compile/install.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wangkaimin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的笔记本">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">安装ffmpeg</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-11T17:11:00+08:00">
+                2019-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/ffmpeg/compile/install.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="ffmpeg/compile/install.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/ffmpeg/compile/install.html" class="leancloud_visitors" data-flag-title="安装ffmpeg">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install srt</span><br><span class="line"></span><br><span class="line">brew upgrade srt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Possible conflicting files are:</span><br><span class="line">/usr/local/bin/srt-ffplay</span><br><span class="line">/usr/local/bin/srt-file-transmit</span><br><span class="line">/usr/local/bin/srt-live-transmit</span><br><span class="line">/usr/local/bin/srt-tunnel</span><br><span class="line">/usr/local/lib/libsrt.1.3.3.dylib</span><br><span class="line">/usr/local/lib/libsrt.1.dylib -&gt; /usr/local/lib/libsrt.1.3.3.dylib</span><br><span class="line">/usr/local/lib/libsrt.a</span><br><span class="line">/usr/local/lib/libsrt.dylib -&gt; /usr/local/lib/libsrt.1.dylib</span><br><span class="line">/usr/local/lib/pkgconfig/haisrt.pc</span><br><span class="line">/usr/local/lib/pkgconfig/srt.pc</span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/local/Cellar/srt/1.3.3: 20 files, 2.8MB</span><br><span class="line">Removing: /usr/local/Cellar/srt/1.3.2... (21 files, 2.7MB)</span><br></pre></td></tr></table></figure>
+<p>brew install srt</p>
+<h1 id="mac-报错"><a href="#mac-报错" class="headerlink" title="mac 报错"></a>mac 报错</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">➜  ffmpeg PKG_CONFIG_PATH=&quot;/usr/local/lib/pkgconfig/&quot; \</span><br><span class="line">./configure \</span><br><span class="line">    --prefix=/usr/local \</span><br><span class="line">    --enable-gpl \</span><br><span class="line">    --enable-libass \</span><br><span class="line">    --enable-libfdk-aac \</span><br><span class="line">    --enable-libfreetype \</span><br><span class="line">    --enable-libmp3lame \</span><br><span class="line">    --enable-libsrt \</span><br><span class="line">    --enable-libtheora \</span><br><span class="line">    --enable-libopus \</span><br><span class="line">    --enable-libvorbis \</span><br><span class="line">    --enable-libvpx \</span><br><span class="line">    --enable-libx264 \</span><br><span class="line">    --enable-libx265 \</span><br><span class="line">    --enable-libxvid \</span><br><span class="line">    --enable-nonfree \</span><br><span class="line">    --samples=fate-suite \</span><br><span class="line">    --pkg-config-flags=&quot;--static&quot;</span><br><span class="line">ERROR: srt &gt;= 1.3.0 not found using pkg-config</span><br><span class="line"></span><br><span class="line">If you think configure made a mistake, make sure you are using the latest</span><br><span class="line">version from Git.  If the latest version fails, report the problem to the</span><br><span class="line">ffmpeg-user@ffmpeg.org mailing list or IRC #ffmpeg on irc.freenode.net.</span><br><span class="line">Include the log file &quot;ffbuild/config.log&quot; produced by configure as this will help</span><br><span class="line">solve the problem.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">require_pkg_config libsrt srt &gt;= 1.3.0 srt/srt.h srt_socket</span><br><span class="line">check_pkg_config libsrt srt &gt;= 1.3.0 srt/srt.h srt_socket</span><br><span class="line">test_pkg_config libsrt srt &gt;= 1.3.0 srt/srt.h srt_socket</span><br><span class="line">pkg-config --exists --print-errors srt &gt;= 1.3.0</span><br><span class="line">Package openssl was not found in the pkg-config search path.</span><br><span class="line">Perhaps you should add the directory containing `openssl.pc&apos;</span><br><span class="line">to the PKG_CONFIG_PATH environment variable</span><br><span class="line">Package &apos;openssl&apos;, required by &apos;srt&apos;, not found</span><br><span class="line">ERROR: srt &gt;= 1.3.0 not found using pkg-config</span><br></pre></td></tr></table></figure>
+<h1 id="ERROR-srt-gt-1-3-0-not-found-using-pkg-config"><a href="#ERROR-srt-gt-1-3-0-not-found-using-pkg-config" class="headerlink" title="ERROR: srt &gt;= 1.3.0 not found using pkg-config"></a>ERROR: srt &gt;= 1.3.0 not found using pkg-config</h1><p>PKG_CONFIG_PATH=”/usr/local/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig” \<br>./configure \<br>    –prefix=/usr/local \<br>    –enable-gpl \<br>    –enable-libaom \<br>    –enable-libass \<br>    –enable-libfdk-aac \<br>    –enable-libfreetype \<br>    –enable-libmp3lame \<br>    –enable-libsrt \<br>    –enable-libtheora \<br>    –enable-libopus \<br>    –enable-libvorbis \<br>    –enable-libvpx \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –enable-libxvid \<br>    –enable-nonfree \<br>    –samples=fate-suite \<br>    –pkg-config-flags=”–static”</p>
+<h1 id="yes"><a href="#yes" class="headerlink" title="yes"></a>yes</h1><p>PKG_CONFIG_PATH=”/usr/local/Cellar/srt/1.3.3/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig” \<br>./configure \<br>    –prefix=/usr/local \<br>    –enable-gpl \<br>    –enable-libaom \<br>    –enable-libass \<br>    –enable-libfdk-aac \<br>    –enable-libfreetype \<br>    –enable-libmp3lame \<br>    –enable-libsrt \<br>    –enable-libtheora \<br>    –enable-libopus \<br>    –enable-libvorbis \<br>    –enable-libvpx \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –enable-libxvid \<br>    –enable-nonfree \<br>    –samples=fate-suite \<br>    –pkg-config-flags=”–static”</p>
+<h1 id="yes-1"><a href="#yes-1" class="headerlink" title="yes"></a>yes</h1><p>PKG_CONFIG_PATH=”$HOME/ffmpeg_build/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig” \<br>./configure \<br>    –prefix=/usr/local \<br>    –enable-gpl \<br>    –enable-libaom \<br>    –enable-libass \<br>    –enable-libfdk-aac \<br>    –enable-libfreetype \<br>    –enable-libmp3lame \<br>    –enable-libsrt \<br>    –enable-libtheora \<br>    –enable-libopus \<br>    –enable-libvorbis \<br>    –enable-libvpx \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –enable-libxvid \<br>    –enable-nonfree \<br>    –samples=fate-suite \<br>    –pkg-config-flags=”–static”</p>
+<h2 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h2><p><a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS" target="_blank" rel="noopener">https://trac.ffmpeg.org/wiki/CompilationGuide/macOS</a></p>
+<p>mkdir ~/ffmpeg_sources ~/ffmpeg_build<br>cd ~/ffmpeg_sources</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://git.ffmpeg.org/ffmpeg.git ffmpeg</span><br><span class="line"><span class="built_in">cd</span> ffmpeg</span><br><span class="line">git checkout -b n4.2 n4.2</span><br><span class="line">rm -rf .git .gitignore .gitattributes</span><br><span class="line"><span class="built_in">cd</span> ../</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Haivision/srt.git</span><br><span class="line"><span class="built_in">cd</span> srt/</span><br><span class="line">git checkout -b v1.3.3 v1.3.3</span><br><span class="line">rm -rf .git</span><br></pre></td></tr></table></figure>
+<p>PKG_CONFIG_PATH=”$HOME/ffmpeg_build/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig” \<br>./configure \<br>    –prefix=/usr/local \<br>    –enable-gpl \<br>    –enable-libaom \<br>    –enable-libass \<br>    –enable-libfdk-aac \<br>    –enable-libfreetype \<br>    –enable-libmp3lame \<br>    –enable-libsrt \<br>    –enable-libtheora \<br>    –enable-libopus \<br>    –enable-libvorbis \<br>    –enable-libvpx \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –enable-libxvid \<br>    –enable-nonfree \<br>    –samples=fate-suite \<br>    –pkg-config-flags=”–static”<br>make</p>
+<p>./configure \<br>    –prefix=/usr/local \<br>    –enable-gpl \<br>    –enable-libass \<br>    –enable-libfdk-aac \<br>    –enable-libfreetype \<br>    –enable-libmp3lame \<br>    –enable-libsrt \<br>    –enable-libtheora \<br>    –enable-libopus \<br>    –enable-libvorbis \<br>    –enable-libvpx \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –enable-libxvid \<br>    –enable-nonfree \<br>    –samples=fate-suite \<br>    –pkg-config-flags=”–static”</p>
+<h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h3><p>apt-get install tclsh pkg-config cmake libssl-dev build-essential<br>apt-get update -qq<br>apt-get install -y \<br>    autoconf automake build-essential \<br>    cmake git \<br>    libass-dev \<br>    libfreetype6-dev libmp3lame-dev \<br>    libsdl2-dev libtheora-dev libxvidcore-dev \<br>    libtool libva-dev libvdpau-dev \<br>    libvorbis-dev libxcb1-dev libxcb-shm0-dev \<br>    libxcb-xfixes0-dev pkg-config texinfo wget zlib1g-dev \<br>    libvpx-dev libfdk-aac-dev libopus-dev libx265-dev x265 libaom-dev</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg: error while loading shared libraries: libsrt.so.1: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 解决方法</span></span><br><span class="line">ldconfig</span><br></pre></td></tr></table></figure>
+<p>##<br>./configure \<br>    –prefix=”$HOME/ffmpeg_build” \<br>    –pkg-config-flags=”–static” \<br>    –extra-cflags=”-I$HOME/ffmpeg_build/include” \<br>    –extra-ldflags=”-L$HOME/ffmpeg_build/lib” \<br>    –extra-libs=”-lpthread -lm” \<br>    –bindir=”$HOME/bin” \<br>    –enable-gpl –enable-libaom –enable-libass –enable-libfdk-aac \<br>    –enable-libfreetype –enable-libmp3lame –enable-libsrt –enable-libtheora –enable-libopus \<br>    –enable-libvorbis –enable-libvpx \<br>    –enable-libx264 –enable-libx265 –enable-nonfree</p>
+<h3 id="easy"><a href="#easy" class="headerlink" title="easy"></a>easy</h3><p>./configure \<br>    –enable-gpl \<br>    –enable-libsrt \<br>    –enable-libx264 \<br>    –enable-libx265 \<br>    –pkg-config-flags=”–static”</p>
+<h3 id="install-srt"><a href="#install-srt" class="headerlink" title="install srt"></a>install srt</h3><p>export PKG_CONFIG_PATH=”$HOME/ffmpeg_build/lib/pkgconfig:/usr/local/opt/openssl/lib/pkgconfig”</p>
+<p>###<br>cd ~/ffmpeg_sources<br>git clone –depth 1 <a href="https://github.com/Haivision/srt.git" target="_blank" rel="noopener">https://github.com/Haivision/srt.git</a><br>mkdir srt/build<br>cd srt/build<br>cmake -DCMAKE_INSTALL_PREFIX=”$HOME/ffmpeg_build” -DENABLE_C_DEPS=ON -DENABLE_SHARED=OFF -DENABLE_STATIC=ON ..<br>make<br>make install</p>
+<h3 id="ubuntu-1"><a href="#ubuntu-1" class="headerlink" title="ubuntu"></a>ubuntu</h3><p>echo $PKG_CONFIG_PATH<br>export PKG_CONFIG_PATH=”/usr/local/lib/pkgconfig/“</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    wangkaimin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://hexo.wangkaimin.com/ffmpeg/compile/install.html" title="安装ffmpeg">https://hexo.wangkaimin.com/ffmpeg/compile/install.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ffmpeg/srt/history.html" rel="next" title="srt in github">
+                <i class="fa fa-chevron-left"></i> srt in github
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mongo/install.html" rel="prev" title="Mac下安装mongodb">
+                Mac下安装mongodb <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">wangkaimin</p>
+              <p class="site-description motion-element" itemprop="description">这是我的个人笔记本，使用Hexo生成，采用Next主题，托管于Github Pages上面。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wangkaimin" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangkaimin.com@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/+kaiminwang" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/wangkaimin" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS"><span class="nav-number">1.</span> <span class="nav-text">macOS</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#mac-报错"><span class="nav-number"></span> <span class="nav-text">mac 报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ERROR-srt-gt-1-3-0-not-found-using-pkg-config"><span class="nav-number"></span> <span class="nav-text">ERROR: srt &gt;= 1.3.0 not found using pkg-config</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#yes"><span class="nav-number"></span> <span class="nav-text">yes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#yes-1"><span class="nav-number"></span> <span class="nav-text">yes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac"><span class="nav-number"></span> <span class="nav-text">mac</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu"><span class="nav-number">1.</span> <span class="nav-text">ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#easy"><span class="nav-number">2.</span> <span class="nav-text">easy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#install-srt"><span class="nav-number">3.</span> <span class="nav-text">install srt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu-1"><span class="nav-number">4.</span> <span class="nav-text">ubuntu</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wangkaimin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://hexo-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://hexo.wangkaimin.com/ffmpeg/compile/install.html';
+          this.page.identifier = 'ffmpeg/compile/install.html';
+          this.page.title = '安装ffmpeg';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hexo-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("P52VfVQJ3ihFIpdVRLHzi9fM-gzGzoHsz", "qkgX9OLeFWGe4N4fAQKgCyGR");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

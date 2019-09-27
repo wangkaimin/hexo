@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hexo.wangkaimin.com/ffmpeg/camera/info.html</loc>
+    
+    <lastmod>2019-09-27T09:49:35.733Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/ffmpeg/srt/history.html</loc>
+    
+    <lastmod>2019-09-27T09:39:17.469Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/nginx/install-nginx-centos.html</loc>
+    
+    <lastmod>2019-09-27T09:36:55.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/nginx/info.html</loc>
+    
+    <lastmod>2019-09-27T09:34:28.139Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/ffmpeg/compile/install.html</loc>
+    
+    <lastmod>2019-09-27T09:12:12.563Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/mongo/install.html</loc>
+    
+    <lastmod>2019-09-27T09:10:42.437Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html</loc>
+    
+    <lastmod>2019-01-15T08:11:43.492Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit.html</loc>
+    
+    <lastmod>2019-01-08T07:09:47.627Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hexo.wangkaimin.com/mac/xcrun.html</loc>
     
     <lastmod>2018-12-29T04:29:40.322Z</lastmod>
@@ -187,13 +243,6 @@
     <loc>https://hexo.wangkaimin.com/redis/2018-09-19-no-such-method-error.html</loc>
     
     <lastmod>2018-09-20T10:31:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hexo.wangkaimin.com/vcs/svn/2018-09-19-svn-commit.html</loc>
-    
-    <lastmod>2018-09-19T08:22:26.000Z</lastmod>
     
   </url>
   

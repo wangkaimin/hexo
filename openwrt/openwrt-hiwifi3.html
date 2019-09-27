@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next gemini" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="个人笔记本, 技术博客">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="我的笔记本" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="OpenWrtindexhttps://openwrt.org/ starthttps://openwrt.org/zh/start targethttps://openwrt.org/docs/techref/targets/start downloadhttps://downloads.openwrt.org/  https://downloads.openwrt.org/releases/">
+<meta name="keywords" content="笔记本,技术博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="极路由3安装openwrt&#x2F;lede">
+<meta property="og:url" content="https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html">
+<meta property="og:site_name" content="我的笔记本">
+<meta property="og:description" content="OpenWrtindexhttps://openwrt.org/ starthttps://openwrt.org/zh/start targethttps://openwrt.org/docs/techref/targets/start downloadhttps://downloads.openwrt.org/  https://downloads.openwrt.org/releases/">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-072815.png">
+<meta property="og:image" content="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-080808.png">
+<meta property="og:image" content="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-033559.png">
+<meta property="og:updated_time" content="2019-01-15T08:11:43.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="极路由3安装openwrt&#x2F;lede">
+<meta name="twitter:description" content="OpenWrtindexhttps://openwrt.org/ starthttps://openwrt.org/zh/start targethttps://openwrt.org/docs/techref/targets/start downloadhttps://downloads.openwrt.org/  https://downloads.openwrt.org/releases/">
+<meta name="twitter:image" content="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-072815.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html">
+
+
+
+
+
+  <title>极路由3安装openwrt/lede | 我的笔记本</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的笔记本</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wangkaimin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的笔记本">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">极路由3安装openwrt/lede</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-15T10:45:00+08:00">
+                2019-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/openwrt/openwrt-hiwifi3.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="openwrt/openwrt-hiwifi3.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/openwrt/openwrt-hiwifi3.html" class="leancloud_visitors" data-flag-title="极路由3安装openwrt/lede">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="OpenWrt"><a href="#OpenWrt" class="headerlink" title="OpenWrt"></a>OpenWrt</h3><h4 id="index"><a href="#index" class="headerlink" title="index"></a>index</h4><p><a href="https://openwrt.org/" target="_blank" rel="noopener">https://openwrt.org/</a></p>
+<h4 id="start"><a href="#start" class="headerlink" title="start"></a>start</h4><p><a href="https://openwrt.org/zh/start" target="_blank" rel="noopener">https://openwrt.org/zh/start</a></p>
+<h4 id="target"><a href="#target" class="headerlink" title="target"></a>target</h4><p><a href="https://openwrt.org/docs/techref/targets/start" target="_blank" rel="noopener">https://openwrt.org/docs/techref/targets/start</a></p>
+<h4 id="download"><a href="#download" class="headerlink" title="download"></a>download</h4><p><a href="https://downloads.openwrt.org/" target="_blank" rel="noopener">https://downloads.openwrt.org/</a></p>
+<p><img src="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-072815.png" alt="image-20190115152815152"></p>
+<p><a href="https://downloads.openwrt.org/releases/" target="_blank" rel="noopener">https://downloads.openwrt.org/releases/</a></p>
+<h3 id="Bootloader"><a href="#Bootloader" class="headerlink" title="Bootloader"></a>Bootloader</h3><h4 id="u-boot"><a href="#u-boot" class="headerlink" title="u-boot"></a><a href="http://rssn.cn/roms/uboot/" target="_blank" rel="noopener">u-boot</a></h4><p><img src="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-080808.png" alt="image-20190115160808658"></p>
+<h4 id="BREED"><a href="#BREED" class="headerlink" title="BREED"></a><a href="https://breed.hackpascal.net/" target="_blank" rel="noopener">BREED</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Boot and Recovery Environment for Embedded Devices (BREED)</span><br><span class="line">A multi-task bootloader with real-time firmware upgrading progress. </span><br><span class="line">NOT A U-BOOT MODIFICATION! </span><br><span class="line">Copyright (C) 2018 HackPascal </span><br><span class="line">Revision: r1266 [2018-12-29] </span><br><span class="line">当前版本：r1266 [2018-12-29]</span><br></pre></td></tr></table></figure>
+<p>NOT A U-BOOT MODIFICATION!</p>
+<p>这不是uboot的修改版，而是全新实现。</p>
+<p><img src="https://ipic.qn.wangkaimin.com/hexo/2019-01-15-033559.png" alt="image-20190115113550393"></p>
+<h4 id="HiWiFi-Gee-HC5661-HC5761-HC5861"><a href="#HiWiFi-Gee-HC5661-HC5761-HC5861" class="headerlink" title="HiWiFi/Gee HC5661/HC5761/HC5861"></a><a href="https://openwrt.org/toh/hiwifi/hiwifi_gee_hc5661" target="_blank" rel="noopener">HiWiFi/Gee HC5661/HC5761/HC5861</a></h4><table>
+<thead>
+<tr>
+<th>Firmware OpenWrt Upgrade URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5661-squashfs-sysupgrade.bin" target="_blank" rel="noopener">http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5661-squashfs-sysupgrade.bin</a></td>
+</tr>
+<tr>
+<td><a href="http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5761-squashfs-sysupgrade.bin" target="_blank" rel="noopener">http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5761-squashfs-sysupgrade.bin</a></td>
+</tr>
+<tr>
+<td><a href="http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5861-squashfs-sysupgrade.bin" target="_blank" rel="noopener">http://downloads.openwrt.org/releases/18.06.1/targets/ramips/mt7620/openwrt-18.06.1-ramips-mt7620-hc5861-squashfs-sysupgrade.bin</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="刷机流程"><a href="#刷机流程" class="headerlink" title="刷机流程"></a>刷机流程</h3><p>参考下面外链</p>
+<blockquote>
+<p>参考</p>
+<p>教程一：<a href="http://www.trickyedecay.me/archives/18/" target="_blank" rel="noopener">http://www.trickyedecay.me/archives/18/</a></p>
+<p>教程二：<a href="https://zhengshun.wang/hiwifi3_to_openwrt.html" target="_blank" rel="noopener">https://zhengshun.wang/hiwifi3_to_openwrt.html</a></p>
+</blockquote>
+<hr>
+<h3 id="大神资料信息"><a href="#大神资料信息" class="headerlink" title="大神资料信息"></a>大神资料信息</h3><p>BREED作者hackpascal相关信息</p>
+<p><a href="https://www.right.com.cn/forum/home.php?mod=space&amp;uid=200302&amp;do=profile" target="_blank" rel="noopener">https://www.right.com.cn/forum/home.php?mod=space&amp;uid=200302&amp;do=profile</a></p>
+<p><a href="https://breed.hackpascal.net/" target="_blank" rel="noopener">https://breed.hackpascal.net/</a></p>
+<p><a href="https://github.com/hackpascal" target="_blank" rel="noopener">https://github.com/hackpascal</a></p>
+<p><a href="https://blog.hackpascal.net/" target="_blank" rel="noopener">https://blog.hackpascal.net/</a></p>
+<p><a href="https://www.zhihu.com/question/50175155" target="_blank" rel="noopener">如何看待恩山论坛的”自主Bootloader”？</a></p>
+<p>Openwrt-hiwifi作者</p>
+<p><a href="https://github.com/rssnsj" target="_blank" rel="noopener">https://github.com/rssnsj</a></p>
+<p><a href="https://github.com/rssnsj/openwrt-hc5x61" target="_blank" rel="noopener">https://github.com/rssnsj/openwrt-hc5x61</a></p>
+<p><a href="http://openwrt-hiwifi.github.io" target="_blank" rel="noopener">http://openwrt-hiwifi.github.io</a></p>
+<p><a href="http://rssn.cn/roms" target="_blank" rel="noopener">http://rssn.cn/roms</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    wangkaimin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html" title="极路由3安装openwrt/lede">https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/temp/resin.html" rel="next" title="Resin error">
+                <i class="fa fa-chevron-left"></i> Resin error
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/nginx/info.html" rel="prev" title="Nginx相关配置">
+                Nginx相关配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">wangkaimin</p>
+              <p class="site-description motion-element" itemprop="description">这是我的个人笔记本，使用Hexo生成，采用Next主题，托管于Github Pages上面。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/wangkaimin" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wangkaimin.com@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/+kaiminwang" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/wangkaimin" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenWrt"><span class="nav-number">1.</span> <span class="nav-text">OpenWrt</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#index"><span class="nav-number">1.1.</span> <span class="nav-text">index</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#start"><span class="nav-number">1.2.</span> <span class="nav-text">start</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#target"><span class="nav-number">1.3.</span> <span class="nav-text">target</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#download"><span class="nav-number">1.4.</span> <span class="nav-text">download</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootloader"><span class="nav-number">2.</span> <span class="nav-text">Bootloader</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u-boot"><span class="nav-number">2.1.</span> <span class="nav-text">u-boot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BREED"><span class="nav-number">2.2.</span> <span class="nav-text">BREED</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HiWiFi-Gee-HC5661-HC5761-HC5861"><span class="nav-number">2.3.</span> <span class="nav-text">HiWiFi/Gee HC5661/HC5761/HC5861</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷机流程"><span class="nav-number">3.</span> <span class="nav-text">刷机流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大神资料信息"><span class="nav-number">4.</span> <span class="nav-text">大神资料信息</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wangkaimin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://hexo-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://hexo.wangkaimin.com/openwrt/openwrt-hiwifi3.html';
+          this.page.identifier = 'openwrt/openwrt-hiwifi3.html';
+          this.page.title = '极路由3安装openwrt/lede';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://hexo-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("P52VfVQJ3ihFIpdVRLHzi9fM-gzGzoHsz", "qkgX9OLeFWGe4N4fAQKgCyGR");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
